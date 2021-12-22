@@ -3,9 +3,9 @@ template: post
 title: Obsidian 上手及使用 Git 跨平台同步
 slug: Obsidian上手及使用Git跨平台同步
 date: 2021-03-03T16:00:00Z
-category: '桌面'
-socialImage: '/media/obsidian-screenshot.png'
-tags: ['Obsidian', 'Evernote', 'Git', 'Productivity', '筆記']
+category: "桌面"
+socialImage: "/media/obsidian-screenshot.png"
+tags: ["Obsidian", "Evernote", "Git", "Productivity", "筆記"]
 ---
 
 > 更新：2021 年 7 月終於推出了 [Obsidian 的 Mobile App](https://obsidian.md/mobile)，同步功能只支援 Obsidian Sync 和本文章介紹的 Git (輔以 Working Copy)。iCloud、 Google Drive 等雲端服務則暫未支援。
