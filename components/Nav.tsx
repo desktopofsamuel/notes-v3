@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/Image";
+import Image from "next/image";
 import {
   Button,
   Box,
@@ -22,7 +22,7 @@ import {
   FaSun,
 } from "react-icons/fa";
 import SocialIcon from "@/components/SocialIcon";
-import { menu } from "@/config/menu";
+import { MENU } from "@/config/index";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -38,16 +38,13 @@ export default function Header() {
       height={{ base: "initial", md: "100px" }}
     >
       <Flex direction="column">
-        <Image
-          src="/profile"
-          width={100}
-          height={100}
-          alt="Profile photo of Samuel W."
-        />
         <Link href="/" passHref>
-          <Heading as="h1" fontSize="medium" mt="4">
-            Samuel W.
-          </Heading>
+          <Box>
+            <Image src="/profile.jpg" width="100" height="100" alt="logo" />
+            <Heading as="h1" fontSize="medium" mt="4">
+              Samuel W.
+            </Heading>
+          </Box>
         </Link>
       </Flex>
       {/* Menu */}
@@ -57,7 +54,7 @@ export default function Header() {
         alignItems={{ base: "flex-end", md: "flex-start" }}
       >
         <VStack spacing="2" alignItems={{ base: "flex-end", md: "flex-start" }}>
-          {menu.map((item) => (
+          {MENU.map((item) => (
             <li key={item.path}>
               <Link href={item.path}>{item.label}</Link>
             </li>

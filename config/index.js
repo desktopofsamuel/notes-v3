@@ -1,12 +1,12 @@
 module.exports = {
-  menu: [
+  MENU: [
     {
       label: "所有文章",
       path: "/",
     },
     {
       label: "關於",
-      path: "/pages/now/",
+      path: "/page/now/",
     },
     {
       label: "科技",
@@ -17,4 +17,5 @@ module.exports = {
       path: "/travel/",
     },
   ],
+  POSTS_PER_PAGE: 6,
 };
