@@ -7,15 +7,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Post from "@/components/Post";
-import { sortByDate } from "../../utils";
-import { POSTS_PER_PAGE } from "@/config/index";
 import Pagination from "@/components/Pagination";
+import { getPosts } from "@/lib/posts";
 
-const CategoryPage: NextPage = ({ posts, numPages, currentPage }) => {
+const CategoryPage: NextPage = ({ posts, categoryName }) => {
   return (
-    <Layout title="Create Next App">
-      <Heading>Desktop of Samuel</Heading>
-      <Text> Hello from the otherside.</Text>
+    <Layout title={`Posts in ${categoryName}`}>
+      <Heading>Posts in {categoryName}</Heading>
       <Grid>
         {posts.map((post, index) => (
           <Post post={post} key={index} />
@@ -45,36 +43,26 @@ export async function getStaticPaths() {
     params: { category_name: category },
   }));
 
-  // console.log(categories);
+  // console.log(paths);
 
   return {
     paths,
     fallback: false,
   };
 }
+
 export async function getStaticProps({ params: { category_name } }) {
-  const files = fs.readdirSync(path.join("content/posts"));
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-    const markdownWithMeta = fs.readFileSync(
-      path.join("content/posts", filename),
-      "utf-8"
-    );
+  const posts = getPosts();
 
-    const { data: frontmatter } = matter(markdownWithMeta);
-
-    return { slug, frontmatter };
-  });
-
-  // console.log(category_name.category_name);
-
+  // Filter post by Category
   const categoryPosts = posts.filter(
     (post) => post.frontmatter.category.toLowerCase() === category_name
   );
-  console.log(categoryPosts);
+
   return {
     props: {
-      posts: categoryPosts.sort(sortByDate).slice(0, 6),
+      posts: categoryPosts,
+      categoryName: category_name,
     },
   };
 }
