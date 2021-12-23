@@ -1,18 +1,18 @@
 import Layout from "@/components/Layout";
 import { Heading, Box, UnorderedList, ListItem } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { getAllPostIds, getPostData } from "../../lib/posts";
 import fs from "fs";
 import path from "path";
 import { marked } from "marked";
 import matter from "gray-matter";
 import Link from "next/link";
+import { PostType } from "@/types/post";
 
 export default function PostPage({
   frontmatter: { title, category, date, socialImage, tags },
   content,
   slug,
-}) {
+}: PostType) {
   return (
     <Layout title={title}>
       <Heading>{title}</Heading>
@@ -20,8 +20,8 @@ export default function PostPage({
       <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       {console.log(slug)}
       <UnorderedList>
-        {tags.map((tag) => (
-          <Link href={`/tag/${tag.toLowerCase()}`}>
+        {tags.map((tag, index) => (
+          <Link href={`/tag/${tag.toLowerCase()}`} key={index}>
             <a>
               <ListItem>{tag}</ListItem>
             </a>
@@ -46,7 +46,11 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
   const markdownWithMeta = fs.readFileSync(
     path.join("content/posts", slug + ".md"),
     "utf-8"

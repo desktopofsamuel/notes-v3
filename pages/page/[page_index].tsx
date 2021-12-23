@@ -8,14 +8,23 @@ import { sortByDate } from "../../utils";
 import { POSTS_PER_PAGE } from "@/config/index";
 import Pagination from "@/components/Pagination";
 import { getPosts } from "@/lib/posts";
+import { PostType } from "@/types/post";
 
-const HomePage: NextPage = ({ posts, numPages, currentPage }) => {
+const HomePage = ({
+  posts,
+  numPages,
+  currentPage,
+}: {
+  posts: any;
+  numPages: number;
+  currentPage: number;
+}) => {
   return (
     <Layout title="Create Next App">
       <Heading>Desktop of Samuel</Heading>
       <Text> Hello from the otherside.</Text>
       <Grid>
-        {posts.map((post, index) => (
+        {posts.map((post: PostType, index: number) => (
           <Post post={post} key={index} />
         ))}
       </Grid>
@@ -44,7 +53,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: { params: any }) {
   const files = getPosts();
   const page = parseInt((params && params.page_index) || 1);
   const numPages = Math.ceil(files.length / POSTS_PER_PAGE);

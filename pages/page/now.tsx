@@ -13,10 +13,10 @@ export default function AboutPage() {
         設計師，閒時愛看電影。大學時對城市研究最著迷，旅行時不忘寫下大街小巷的見聞。
       </Text>
       <HStack gap="4">
-        <Link href="https://twitter.com/desktopofsamuel">
+        <Link passHref href="https://twitter.com/desktopofsamuel">
           <Button leftIcon={<FaTwitter />}>我的 Twitter</Button>
         </Link>
-        <Link href="https://www.instagram.com/desktopofsamuel/">
+        <Link passHref href="https://www.instagram.com/desktopofsamuel/">
           <Button leftIcon={<FaInstagram />}>我的 Instagram</Button>
         </Link>
       </HStack>

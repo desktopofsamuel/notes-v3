@@ -12,14 +12,15 @@ import { POSTS_PER_PAGE } from "@/config/index";
 import Pagination from "@/components/Pagination";
 import { getAllTopics } from "@/lib/getTopics";
 import { getPosts } from "@/lib/posts";
+import { PostType } from "@/types/post";
 
-const TagPage: NextPage = ({ posts }) => {
+const TagPage = ({ posts, tagName }: { posts: any; tagName: string }) => {
   return (
     <Layout title="Create Next App">
-      <Heading>Desktop of Samuel</Heading>
+      <Heading>Tags with {tagName}</Heading>
       <Text> Hello from the otherside.</Text>
       <Grid>
-        {posts.map((post, index) => (
+        {posts.map((post: PostType, index: number) => (
           <Post post={post} key={index} />
         ))}
       </Grid>
@@ -89,17 +90,22 @@ export async function getStaticPaths() {
 // };
 // }
 
-export async function getStaticProps({ params: { tag_name } }) {
+export async function getStaticProps({
+  params: { tag_name },
+}: {
+  params: { tag_name: string };
+}) {
   const posts = getPosts();
 
   // Filter post by tag
   const filteredPosts = posts.filter((post) =>
-    post.frontmatter.tags.map((t) => t.toLowerCase()).includes(tag_name)
+    post.frontmatter.tags.map((t: any) => t.toLowerCase()).includes(tag_name)
   );
 
   return {
     props: {
       posts: filteredPosts,
+      tagName: tag_name,
     },
   };
 }

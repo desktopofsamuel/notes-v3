@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import dayjs from "dayjs";
+import { PostType } from "@/types/post";
 import { HStack, Text, Box, Heading } from "@chakra-ui/react";
 
-export default function Post({ post }) {
+export default function Post({ post }: { post: PostType }) {
+  console.log(post);
   return (
     <Box as="article">
       <HStack spacing="2">

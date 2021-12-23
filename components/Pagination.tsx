@@ -1,7 +1,14 @@
 import { Flex, Button } from "@chakra-ui/react";
 import Link from "next/link";
+import internal from "stream";
 
-export default function Pagination({ numPages, currentPage }) {
+export default function Pagination({
+  numPages,
+  currentPage,
+}: {
+  numPages: number;
+  currentPage: number;
+}) {
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const prevPage = `/page/${currentPage - 1}`;

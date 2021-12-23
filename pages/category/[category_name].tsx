@@ -9,13 +9,20 @@ import matter from "gray-matter";
 import Post from "@/components/Post";
 import Pagination from "@/components/Pagination";
 import { getPosts } from "@/lib/posts";
+import { PostType } from "@/types/post";
 
-const CategoryPage: NextPage = ({ posts, categoryName }) => {
+const CategoryPage = ({
+  posts,
+  categoryName,
+}: {
+  posts: any;
+  categoryName: string;
+}) => {
   return (
     <Layout title={`Posts in ${categoryName}`}>
       <Heading>Posts in {categoryName}</Heading>
       <Grid>
-        {posts.map((post, index) => (
+        {posts.map((post: PostType, index: number) => (
           <Post post={post} key={index} />
         ))}
       </Grid>
@@ -51,7 +58,11 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { category_name } }) {
+export async function getStaticProps({
+  params: { category_name },
+}: {
+  params: { category_name: string };
+}) {
   const posts = getPosts();
 
   // Filter post by Category

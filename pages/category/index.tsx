@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import { UnorderedList, ListItem, Heading } from "@chakra-ui/react";
 import { getPosts } from "@/lib/posts";
 
-const CategoryPage: NextPage = ({ categories }) => {
+const CategoryPage = ({ categories }: any) => {
   return (
     <Layout title="Category">
       <Heading as="h1" variant="pagetitle">
@@ -12,7 +12,7 @@ const CategoryPage: NextPage = ({ categories }) => {
       </Heading>
       <UnorderedList>
         {/* {console.log(categories)} */}
-        {categories.map((category, index) => (
+        {categories.map((category: string, index: number) => (
           <Link href={`/category/${category.toLowerCase()}`} key={index}>
             <a>
               <ListItem>{category}</ListItem>
@@ -30,7 +30,8 @@ export default CategoryPage;
 export async function getStaticProps() {
   const posts = getPosts();
   const categories = posts.map((post) => post.frontmatter.category);
-  const uniqueCategories = [...new Set(categories)];
+  const uniqueCategories = [...Array.from(new Set(categories))];
+  console.log(categories);
 
   // const count = uniqueCategories.size;
 
