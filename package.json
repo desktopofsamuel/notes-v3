@@ -25,6 +25,7 @@
     "superjson": "^1.8.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.1.1",
     "@types/marked": "^4.0.1",
     "@types/node": "17.0.1",
     "@types/react": "17.0.37",

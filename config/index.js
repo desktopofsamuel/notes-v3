@@ -10,11 +10,11 @@ module.exports = {
     },
     {
       label: "科技",
-      path: "/tech/",
+      path: "/tag/tech/",
     },
     {
       label: "旅遊",
-      path: "/travel/",
+      path: "/category/地圖",
     },
   ],
   POSTS_PER_PAGE: 6,
