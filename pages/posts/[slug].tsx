@@ -18,7 +18,7 @@ export default function PostPage({
       <Heading>{title}</Heading>
       {/* <img src={socialImage} alt="" /> */}
       <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-      {console.log(slug)}
+      {/* {console.log(slug)} */}
       <UnorderedList>
         {tags.map((tag, index) => (
           <Link href={`/tag/${tag.toLowerCase()}`} key={index}>

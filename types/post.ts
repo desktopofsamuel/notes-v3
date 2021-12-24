@@ -8,4 +8,5 @@ export type PostType = {
     };
     slug: string;
     content: any;
+    excerpt: string;
 };

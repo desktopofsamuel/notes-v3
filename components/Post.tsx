@@ -5,7 +5,7 @@ import { PostType } from "@/types/post";
 import { HStack, Text, Box, Heading } from "@chakra-ui/react";
 
 export default function Post({ post }: { post: PostType }) {
-  console.log(post);
+  // console.log(post);
   return (
     <Box as="article">
       <HStack spacing="2">
@@ -28,6 +28,7 @@ export default function Post({ post }: { post: PostType }) {
           </Heading>
         </a>
       </Link>
+      <Text>{post.excerpt}</Text>
     </Box>
   );
 }
