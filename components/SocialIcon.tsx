@@ -1,10 +1,9 @@
-import React from "react";
 import Link from "next/link";
 import { IconButton } from "@chakra-ui/react";
 
 type SocialIconType = {
   href: string;
-  children: React.ReactNode;
+  children: any;
   label: string;
 };
 
