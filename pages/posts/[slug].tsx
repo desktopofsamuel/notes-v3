@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { Heading, Box, UnorderedList, ListItem } from "@chakra-ui/react";
+import { Heading, Box, UnorderedList, ListItem, Wrap } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
@@ -7,6 +7,7 @@ import { marked } from "marked";
 import matter from "gray-matter";
 import Link from "next/link";
 import { PostType } from "@/types/post";
+import Tag from "@/components/Tag";
 
 export default function PostPage({
   frontmatter: { title, category, date, socialImage, tags },
@@ -20,13 +21,14 @@ export default function PostPage({
       <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       {/* {console.log(slug)} */}
       <UnorderedList>
-        {tags.map((tag, index) => (
-          <Link href={`/tag/${tag.toLowerCase()}`} key={index}>
-            <a>
-              <ListItem>{tag}</ListItem>
-            </a>
-          </Link>
-        ))}
+        <Wrap spacing="2">
+          {tags &&
+            tags.map((tag, index) => (
+              <Tag href={tag} key={index}>
+                {tag}
+              </Tag>
+            ))}
+        </Wrap>
       </UnorderedList>
     </Layout>
   );

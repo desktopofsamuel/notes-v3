@@ -150,7 +150,23 @@ const customTheme = extendTheme({
         // color: mode('red.900', 'whiteAlpha.100')(props),
       }),
     },
-    Link: {},
+    Link: {
+      baseStyle: (props) => ({
+        color: "red",
+      }),
+      variants: {
+        navigation: (props) => ({
+          color: "red",
+          borderBottomWidth: "1px",
+          borderBottomColor: "transparent",
+          _hover: {
+            color: mode("primary.500", "primary.400"),
+            borderBottomColor: mode("primary.500", "primary.400"),
+            borderBottomWidth: "1px",
+          },
+        }),
+      },
+    },
     VStack: {
       baseStyle: {
         align: "flex-start",
@@ -206,6 +222,13 @@ const customTheme = extendTheme({
         //   borderBottomColor: 'primary.500',
         //   borderBottomStyle: 'solid',
         // },
+        borderBottomWidth: "1px",
+        borderBottomColor: "transparent",
+        _hover: {
+          color: mode("primary.500", "primary.400")(props),
+          borderBottomColor: mode("primary.500", "primary.400")(props),
+          borderBottomWidth: "1px",
+        },
       },
       h1: {
         fontSize: "xl",

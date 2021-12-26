@@ -1,4 +1,4 @@
-import Link from "next/link";
+import NextLink from "@/components/NextLink";
 import Image from "next/image";
 import {
   Button,
@@ -11,6 +11,8 @@ import {
   useColorMode,
   useColorModeValue,
   IconButton,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import {
   FaTwitter,
@@ -38,14 +40,14 @@ export default function Header() {
       height={{ base: "initial", md: "100px" }}
     >
       <Flex direction="column">
-        <Link href="/" passHref>
+        <NextLink href="/" passHref>
           <Box>
             <Image src="/profile.jpg" width="100" height="100" alt="logo" />
             <Heading as="h1" fontSize="medium" mt="4">
               Samuel W.
             </Heading>
           </Box>
-        </Link>
+        </NextLink>
       </Flex>
       {/* Menu */}
       <VStack
@@ -54,11 +56,15 @@ export default function Header() {
         alignItems={{ base: "flex-end", md: "flex-start" }}
       >
         <VStack spacing="2" alignItems={{ base: "flex-end", md: "flex-start" }}>
-          {MENU.map((item) => (
-            <li key={item.path}>
-              <Link href={item.path}>{item.label}</Link>
-            </li>
-          ))}{" "}
+          <UnorderedList>
+            {MENU.map((item) => (
+              <ListItem key={item.path} listStyleType="none">
+                <NextLink href={item.path} variant="navigation">
+                  {item.label}
+                </NextLink>
+              </ListItem>
+            ))}
+          </UnorderedList>
         </VStack>
         {/* Social Icons */}
         <SimpleGrid

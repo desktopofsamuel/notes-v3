@@ -3,6 +3,7 @@ import Image from "next/image";
 import dayjs from "dayjs";
 import { PostType } from "@/types/post";
 import { HStack, Text, Box, Heading } from "@chakra-ui/react";
+import NextLink from "@/components/NextLink";
 
 export default function Post({ post }: { post: PostType }) {
   // console.log(post);
@@ -21,13 +22,11 @@ export default function Post({ post }: { post: PostType }) {
           {post.frontmatter.category}
         </Text>
       </HStack>
-      <Link href={`/posts/${post.slug}`} passHref>
-        <a>
-          <Heading variant="title" as="h2" mt="0">
-            {post.frontmatter.title}
-          </Heading>
-        </a>
-      </Link>
+      <NextLink href={`/posts/${post.slug}`} passHref>
+        <Heading variant="title" as="h2" mt="0">
+          {post.frontmatter.title}
+        </Heading>
+      </NextLink>
       <Text>{post.excerpt}</Text>
     </Box>
   );
