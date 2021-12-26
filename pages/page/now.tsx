@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 import { HStack, Heading, Text, Button } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter } from "react-icons/fa";
+import Now from "@/components/Now";
 
 export default function AboutPage() {
   return (
@@ -20,6 +21,7 @@ export default function AboutPage() {
           <Button leftIcon={<FaInstagram />}>我的 Instagram</Button>
         </Link>
       </HStack>
+      <Now />
     </Layout>
   );
 }
