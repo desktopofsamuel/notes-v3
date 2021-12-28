@@ -23,7 +23,14 @@ export default function NextLink({
         variant={variant}
         {...rest}
       >
-        {children}
+        <ChakraLink
+          href={href}
+          className={className}
+          variant={variant}
+          {...rest}
+        >
+          {children}
+        </ChakraLink>
       </CustomLink>
     );
   return (

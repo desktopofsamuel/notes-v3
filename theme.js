@@ -151,18 +151,24 @@ const customTheme = extendTheme({
       }),
     },
     Link: {
-      baseStyle: (props) => ({
-        color: "red",
-      }),
+      baseStyle: (props) => ({}),
       variants: {
+        postTitle: (props) => ({
+          color: "gray.800",
+          _hover: {
+            borderBottomColor: "transparent",
+            color: "gray.600",
+            textDecoration: "none",
+          },
+        }),
         navigation: (props) => ({
-          color: "red",
           borderBottomWidth: "1px",
           borderBottomColor: "transparent",
           _hover: {
             color: mode("primary.500", "primary.400"),
             borderBottomColor: mode("primary.500", "primary.400"),
             borderBottomWidth: "1px",
+            textDecoration: "none",
           },
         }),
       },

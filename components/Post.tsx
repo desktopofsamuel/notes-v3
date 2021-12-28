@@ -9,7 +9,7 @@ export default function Post({ post }: { post: PostType }) {
   // console.log(post);
   return (
     <Box as="article">
-      <HStack spacing="2">
+      <HStack as="span" spacing="2">
         <Text
           as="time"
           fontSize="sm"
@@ -22,7 +22,7 @@ export default function Post({ post }: { post: PostType }) {
           {post.frontmatter.category}
         </Text>
       </HStack>
-      <NextLink href={`/posts/${post.slug}`} passHref>
+      <NextLink href={`/posts/${post.slug}`} passHref variant="postTitle">
         <Heading variant="title" as="h2" mt="0">
           {post.frontmatter.title}
         </Heading>
