@@ -43,7 +43,7 @@ export default function Header() {
         <NextLink href="/" passHref>
           <Box>
             <Image src="/profile.jpg" width="100" height="100" alt="logo" />
-            <Heading as="h1" fontSize="medium" mt="4">
+            <Heading fontSize="medium" mt="4">
               Samuel W.
             </Heading>
           </Box>
@@ -55,17 +55,16 @@ export default function Header() {
         spacing="2"
         alignItems={{ base: "flex-end", md: "flex-start" }}
       >
-        <VStack spacing="2" alignItems={{ base: "flex-end", md: "flex-start" }}>
-          <UnorderedList>
-            {MENU.map((item) => (
-              <ListItem key={item.path} listStyleType="none">
-                <NextLink href={item.path} variant="navigation">
-                  {item.label}
-                </NextLink>
-              </ListItem>
-            ))}
-          </UnorderedList>
-        </VStack>
+        <UnorderedList spacing="2" marginInlineStart="0" mb="8">
+          {MENU.map((item) => (
+            <ListItem key={item.path} listStyleType="none">
+              <NextLink href={item.path} variant="navigation">
+                {item.label}
+              </NextLink>
+            </ListItem>
+          ))}
+        </UnorderedList>
+
         {/* Social Icons */}
         <SimpleGrid
           spacingX="4"

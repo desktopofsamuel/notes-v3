@@ -10,6 +10,7 @@ import Post from "@/components/Post";
 import Pagination from "@/components/Pagination";
 import { getPosts } from "@/lib/posts";
 import { PostType } from "@/types/post";
+import ImagePost from "@/components/ImagePost";
 
 const CategoryPage = ({
   posts,
@@ -21,11 +22,16 @@ const CategoryPage = ({
   return (
     <Layout title={`Posts in ${categoryName}`}>
       <Heading>Posts in {categoryName}</Heading>
-      <Grid>
-        {posts.map((post: PostType, index: number) => (
-          <Post post={post} key={index} />
-        ))}
-      </Grid>
+      <Grid></Grid>
+      {categoryName == "地圖"
+        ? posts.map((post: PostType, index: number) => (
+            // <Post post={post} key={index} />
+            <ImagePost post={post} key={index} />
+          ))
+        : posts.map((post: PostType, index: number) => (
+            // <Post post={post} key={index} />
+            <Post post={post} key={index} />
+          ))}
       {/* <Pagination currentPage={currentPage} numPages={numPages} /> */}
     </Layout>
   );

@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import Parser from "rss-parser";
 import NextLink from "./NextLink";
-import { Text, Grid, Tooltip, Box, useColorModeValue } from "@chakra-ui/react";
+import {
+  Text,
+  Grid,
+  Tooltip,
+  Box,
+  useColorModeValue,
+  HStack,
+} from "@chakra-ui/react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Books = () => {
@@ -34,7 +41,7 @@ const Books = () => {
         <Text m="0" mb="2">
           📚 最近在讀
         </Text>
-        {feed.items.slice(0, 4).map((item, i) => (
+        {feed.items.slice(0, 5).map((item, i) => (
           <Box key={i} mb="4">
             <NextLink
               fontSize="lg"
@@ -45,7 +52,9 @@ const Books = () => {
               target="_blank"
               isExternal
             >
-              {item.title} <FaExternalLinkAlt />
+              <HStack>
+                <Text>{item.title}</Text> <FaExternalLinkAlt />
+              </HStack>
             </NextLink>
 
             <Text m="0" fontSize="xs" textTransform="uppercase">

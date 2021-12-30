@@ -22,12 +22,12 @@ export default function Post({ post }: { post: PostType }) {
           {post.frontmatter.category}
         </Text>
       </HStack>
-      <NextLink href={`/posts/${post.slug}`} passHref variant="postTitle">
+      <NextLink href={`/posts/${post.slug}`} passHref>
         <Heading variant="title" as="h2" mt="0">
           {post.frontmatter.title}
         </Heading>
       </NextLink>
-      <Text>{post.excerpt}</Text>
+      <Text noOfLines={3}>{post.excerpt}</Text>
     </Box>
   );
 }

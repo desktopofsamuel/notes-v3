@@ -1,12 +1,14 @@
 import Films from "@/components/Films";
 import Books from "@/components/Books";
+import { VStack } from "@chakra-ui/react";
 
 export default function Now() {
   return (
     <>
-      <Films />
-      <Books />
-      <div>Now Recent Films</div>
+      <VStack spacing="4">
+        <Films />
+        <Books />
+      </VStack>
     </>
   );
 }

@@ -58,14 +58,14 @@ const Films = () => {
               }}
               boxShadow="2px 0 7px grey;"
             >
-              <NextLink href={item.link} target="_blank" passHref>
+              <NextLink href={item.link} target="_blank">
                 <Tooltip label={item.title} fontSize="md" mt="10px">
-                  <Image
+                  <img
                     src={imageParser(item.content)}
                     width="200"
                     height="300"
                     alt={item.title}
-                  ></Image>
+                  ></img>
                 </Tooltip>
               </NextLink>
             </Box>
