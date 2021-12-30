@@ -4,7 +4,7 @@ import NextLink from "./NextLink";
 import { Text, Grid, Tooltip, Box, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
 
-const RssFeed = () => {
+const Films = () => {
   const [feed, setFeed] = useState({ title: "", items: [] });
 
   /* ImageParser for Letterboxd Film Poster */
@@ -18,12 +18,12 @@ const RssFeed = () => {
   }
 
   const rssData = async () => {
-    const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+    // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
     let parser = new Parser();
 
     try {
       const feed = await parser.parseURL(
-        `${CORS_PROXY}https://letterboxd.com/samuelisme/rss`
+        `https://damp-lowlands-80262.herokuapp.com/letterboxd`
       );
       setFeed(feed);
     } catch (error) {
@@ -58,14 +58,14 @@ const RssFeed = () => {
               }}
               boxShadow="2px 0 7px grey;"
             >
-              <NextLink href={item.link} target="_blank">
+              <NextLink href={item.link} target="_blank" passHref>
                 <Tooltip label={item.title} fontSize="md" mt="10px">
-                  <img
+                  <Image
                     src={imageParser(item.content)}
                     width="200"
                     height="300"
                     alt={item.title}
-                  ></img>
+                  ></Image>
                 </Tooltip>
               </NextLink>
             </Box>
@@ -76,4 +76,4 @@ const RssFeed = () => {
   );
 };
 
-export default RssFeed;
+export default Films;

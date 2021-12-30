@@ -1,13 +1,12 @@
-// import { getLetterBoxd } from "@/lib/getLetterBoxd";
-import MovieCard from "@/components/MovieCard";
+import Films from "@/components/Films";
+import Books from "@/components/Books";
 
 export default function Now() {
-  // const films = getLetterBoxd();
   return (
     <>
-      <MovieCard />
+      <Films />
+      <Books />
       <div>Now Recent Films</div>
-      {/* {console.log(films)} */}
     </>
   );
 }
