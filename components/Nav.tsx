@@ -7,6 +7,7 @@ import {
   Grid,
   Heading,
   VStack,
+  Image as ChakraImage,
   SimpleGrid,
   useColorMode,
   useColorModeValue,
@@ -24,7 +25,7 @@ import {
   FaSun,
 } from "react-icons/fa";
 import SocialIcon from "@/components/SocialIcon";
-import { MENU } from "@/config/index";
+import { MENU, BIO } from "@/config/index";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -40,14 +41,22 @@ export default function Header() {
       height={{ base: "initial", md: "100px" }}
     >
       <Flex direction="column">
-        <NextLink href="/" passHref>
-          <Box>
-            <Image src="/profile.jpg" width="100" height="100" alt="logo" />
-            <Heading fontSize="medium" mt="4">
-              Samuel W.
-            </Heading>
-          </Box>
+        <NextLink href="/" passHref variant="none">
+          <ChakraImage
+            src="/profile.jpg"
+            width={100}
+            height={100}
+            alt="logo"
+            borderRadius="50%"
+          />
         </NextLink>
+
+        <NextLink href="/" passHref variant="none">
+          <Heading fontSize="medium" mt="4">
+            Samuel W.
+          </Heading>
+        </NextLink>
+        <Box dangerouslySetInnerHTML={{ __html: BIO }} />
       </Flex>
       {/* Menu */}
       <VStack
