@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { Container, Grid, Box } from "@chakra-ui/react";
 import Nav from "@/components/Nav";
+import { NextSeo } from "next-seo";
 
 export default function Layout({
   title,
@@ -11,12 +12,16 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-      </Head>
+      <NextSeo
+        title={title}
+        description={description}
+        // additionalMetaTags={[
+        //   {
+        //     property: "keywords",
+        //     content: keywords,
+        //   },
+        // ]}
+      />
       <Container maxW="container.lg">
         <Grid
           gridTemplateColumns={{
@@ -43,17 +48,8 @@ export default function Layout({
 }
 
 type LayoutProps = {
-  title: string;
-  description: string;
-  keywords: string;
+  title?: string;
+  description?: string;
+  keywords?: [string];
   children: React.ReactNode;
 };
-
-const defaultProps: LayoutProps = {
-  title: "DJ Events | Find the parties",
-  description: "Find the latest DJ parties",
-  keywords: "music, dj, events, parties",
-  children: "",
-};
-
-Layout.defaultProps = defaultProps;

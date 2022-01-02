@@ -20,7 +20,7 @@ const HomePage = ({
   currentPage: number;
 }) => {
   return (
-    <Layout title="Create Next App">
+    <Layout>
       <Heading>Desktop of Samuel</Heading>
       <Text> Hello from the otherside.</Text>
       <Grid>

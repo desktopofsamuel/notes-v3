@@ -151,13 +151,25 @@ const customTheme = extendTheme({
       }),
     },
     Link: {
-      baseStyle: (props) => ({}),
+      baseStyle: (props) => ({
+        transition: "all 500ms ease-in-out",
+        borderBottomColor: "transparent",
+        color: "gray.600",
+        textDecoration: "none",
+        _hover: {
+          textDecoration: "none",
+        },
+      }),
       variants: {
+        none: (props) => ({
+          _hover: {
+            borderBottomColor: "transparent",
+          },
+        }),
         postTitle: (props) => ({
           color: "gray.800",
           _hover: {
             borderBottomColor: "transparent",
-            color: "gray.600",
             textDecoration: "none",
           },
         }),

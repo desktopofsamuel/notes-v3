@@ -6,7 +6,11 @@ import Now from "@/components/Now";
 
 export default function AboutPage() {
   return (
-    <Layout title="關於本站" description="" keywords="">
+    <Layout
+      title="關於本站"
+      description="帕慕克說過，真正的博物館是時間被轉化成空間的地方。若把我的人生策展成一個展覽，書桌上大概會放著一部
+    MacBook、一部相機和一枝筆桿。"
+    >
       <Heading>關於我 About Me</Heading>
       <Text>
         帕慕克說過，真正的博物館是時間被轉化成空間的地方。若把我的人生策展成一個展覽，書桌上大概會放著一部
