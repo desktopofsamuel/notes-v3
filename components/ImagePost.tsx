@@ -7,10 +7,13 @@ import {
   chakra,
   Box,
   SimpleGrid,
+  Image as ChakraImage,
   Heading,
   Text,
   VStack,
 } from "@chakra-ui/react";
+
+const NextImage = chakra(Image);
 
 export default function Post({ post }: { post: PostType }) {
   // console.log(post);
@@ -35,7 +38,7 @@ export default function Post({ post }: { post: PostType }) {
           transition="all 0.2s ease-in-out"
         />
         {post.frontmatter.socialImage && (
-          <img
+          <NextImage
             src={post.frontmatter.socialImage}
             alt={post.frontmatter.title}
             objectFit="cover"

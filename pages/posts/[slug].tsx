@@ -8,22 +8,30 @@ import matter from "gray-matter";
 import Link from "next/link";
 import { PostType } from "@/types/post";
 import Tag from "@/components/Tag";
+import { getExcerpt } from "@/lib/getExcerpt";
 
 export default function PostPage({
-  frontmatter: { title, category, date, socialImage, tags },
+  frontmatter,
   content,
   slug,
+  excerpt,
 }: PostType) {
   return (
-    <Layout title={title}>
-      <Heading>{title}</Heading>
+    <Layout
+      title={frontmatter.title}
+      keywords={frontmatter.tags}
+      description={excerpt}
+    >
+      {/* <SEO postFrontmatter={frontmatter} path={slug} postSEO /> */}
+      <Heading>{frontmatter.title}</Heading>
+      {console.log(excerpt)}
       {/* <img src={socialImage} alt="" /> */}
       <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       {/* {console.log(slug)} */}
       <UnorderedList>
         <Wrap spacing="2">
-          {tags &&
-            tags.map((tag, index) => (
+          {frontmatter.tags &&
+            frontmatter.tags.map((tag, index) => (
               <Tag href={tag} key={index}>
                 {tag}
               </Tag>
@@ -59,10 +67,12 @@ export async function getStaticProps({
   );
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
+  const excerpt = getExcerpt(content, 100);
   return {
     props: {
       frontmatter,
       content,
+      excerpt,
       slug,
     },
   };
