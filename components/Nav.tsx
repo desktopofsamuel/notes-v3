@@ -38,7 +38,6 @@ export default function Header() {
       mb={{ base: "8", md: "0" }}
       position={{ base: "initial", md: "sticky" }}
       top={{ base: "0", md: "4" }}
-      height={{ base: "initial", md: "100px" }}
     >
       <Flex direction="column">
         <NextLink href="/" passHref variant="noeffect">
@@ -60,8 +59,7 @@ export default function Header() {
       </Flex>
       {/* Menu */}
       <VStack
-        as="ul"
-        spacing="2"
+        gap={{ base: "2", md: "8" }}
         alignItems={{ base: "flex-end", md: "flex-start" }}
       >
         <UnorderedList spacing="2" marginInlineStart="0" mb="8">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container, Grid, Box } from "@chakra-ui/react";
 import Nav from "@/components/Nav";
 import { NextSeo } from "next-seo";
+import FooterNav from "@/components/FooterNav";
 
 export default function Layout({
   title,
@@ -42,6 +43,7 @@ export default function Layout({
           <Box as="main">{children}</Box>
         </Grid>
         {/* <Footer /> */}
+        <FooterNav />
       </Container>
     </>
   );
