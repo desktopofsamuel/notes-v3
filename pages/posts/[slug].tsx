@@ -28,7 +28,7 @@ export default function PostPage({
       {/* <img src={socialImage} alt="" /> */}
       <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       {/* {console.log(slug)} */}
-      <UnorderedList>
+      <UnorderedList marginInlineStart="0">
         <Wrap spacing="2">
           {frontmatter.tags &&
             frontmatter.tags.map((tag, index) => (

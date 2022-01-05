@@ -9,6 +9,7 @@ import { POSTS_PER_PAGE } from "@/config/index";
 import Pagination from "@/components/Pagination";
 import { getPosts } from "@/lib/posts";
 import { PostType } from "@/types/post";
+import Now from "@/components/Now";
 
 const HomePage = ({
   posts,
@@ -21,8 +22,9 @@ const HomePage = ({
 }) => {
   return (
     <Layout>
-      <Heading>Desktop of Samuel</Heading>
-      <Text> Hello from the otherside.</Text>
+      <Heading fontSize="md">近期 Now</Heading>
+
+      {currentPage == 1 && <Now />}
       <Grid>
         {posts.map((post: PostType, index: number) => (
           <Post post={post} key={index} />

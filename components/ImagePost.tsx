@@ -41,6 +41,7 @@ export default function Post({ post }: { post: PostType }) {
           <NextImage
             src={post.frontmatter.socialImage}
             alt={post.frontmatter.title}
+            layout="fill"
             objectFit="cover"
             zIndex="-1"
             height="100%"

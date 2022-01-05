@@ -66,44 +66,19 @@ const Films = () => {
           {!data ? (
             <>
               <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box
-                  backgroundColor="black"
-                  width="200"
-                  height="300"
-                  alt="Placeholder Image"
-                ></Box>
+                <Box backgroundColor="black" alt="Placeholder Image"></Box>
               </Box>{" "}
               <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box
-                  backgroundColor="black"
-                  width="200"
-                  height="300"
-                  alt="Placeholder Image"
-                ></Box>
+                <Box backgroundColor="black" alt="Placeholder Image"></Box>
               </Box>{" "}
               <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box
-                  backgroundColor="black"
-                  width="200"
-                  height="300"
-                  alt="Placeholder Image"
-                ></Box>
+                <Box backgroundColor="black" alt="Placeholder Image"></Box>
               </Box>{" "}
               <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box
-                  backgroundColor="black"
-                  width="200"
-                  height="300"
-                  alt="Placeholder Image"
-                ></Box>
+                <Box backgroundColor="black" alt="Placeholder Image"></Box>
               </Box>
               <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box
-                  backgroundColor="black"
-                  width="200"
-                  height="300"
-                  alt="Placeholder Image"
-                ></Box>
+                <Box backgroundColor="black" alt="Placeholder Image"></Box>
               </Box>
             </>
           ) : (

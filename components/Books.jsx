@@ -8,7 +8,8 @@ import {
   Tooltip,
   Box,
   useColorModeValue,
-  HStack,
+  Flex,
+  Wrap,
 } from "@chakra-ui/react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -72,9 +73,10 @@ const Books = () => {
                 target="_blank"
                 isExternal
               >
-                <HStack>
-                  <Text>{item.title}</Text> <FaExternalLinkAlt />
-                </HStack>
+                <Wrap spacing="2">
+                  <Text>{item.title}</Text>
+                  <FaExternalLinkAlt />
+                </Wrap>
               </NextLink>
 
               <Text m="0" fontSize="xs" textTransform="uppercase">

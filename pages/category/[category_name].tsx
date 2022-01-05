@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "@/components/Layout";
-import { Box, Grid, Heading, Text } from "@chakra-ui/react";
+import { SimpleGrid, Box, Grid, Heading, Text } from "@chakra-ui/react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -22,16 +22,19 @@ const CategoryPage = ({
   return (
     <Layout title={`Posts in ${categoryName}`}>
       <Heading>Posts in {categoryName}</Heading>
-      <Grid></Grid>
-      {categoryName == "地圖"
-        ? posts.map((post: PostType, index: number) => (
-            // <Post post={post} key={index} />
+
+      {categoryName == "地圖" ? (
+        <SimpleGrid spacing="4" columns={{ base: 1, sm: 2 }}>
+          {posts.map((post: PostType, index: number) => (
             <ImagePost post={post} key={index} />
-          ))
-        : posts.map((post: PostType, index: number) => (
-            // <Post post={post} key={index} />
-            <Post post={post} key={index} />
           ))}
+        </SimpleGrid>
+      ) : (
+        posts.map((post: PostType, index: number) => (
+          // <Post post={post} key={index} />
+          <Post post={post} key={index} />
+        ))
+      )}
       {/* <Pagination currentPage={currentPage} numPages={numPages} /> */}
     </Layout>
   );
