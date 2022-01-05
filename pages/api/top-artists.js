@@ -1,6 +1,6 @@
 import { getTopArtists } from "@/lib/spotify";
 
-export default async (_, res) => {
+export default async function TopArtist(_, res) {
   const response = await getTopArtists();
   const { items } = await response.json();
 
@@ -13,4 +13,4 @@ export default async (_, res) => {
   console.log(artists);
 
   return res.status(200).json(artists);
-};
+}

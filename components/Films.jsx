@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 import Parser from "rss-parser";
