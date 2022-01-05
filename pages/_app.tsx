@@ -1,6 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import customTheme from "../theme.js";
-import "../styles/globals.css";
 import { DefaultSeo } from "next-seo";
 import SEO from "../seo-config";
 import type { AppProps } from "next/app";
