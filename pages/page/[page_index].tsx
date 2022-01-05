@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Layout from "@/components/Layout";
-import { Box, Grid, Heading, Text } from "@chakra-ui/react";
+import { Heading, VStack } from "@chakra-ui/react";
 import fs from "fs";
 import path from "path";
 import Post from "@/components/Post";
@@ -25,11 +25,11 @@ const HomePage = ({
       <Heading fontSize="md">近期 Now</Heading>
 
       {currentPage == 1 && <Now />}
-      <Grid>
+      <VStack spacing="8">
         {posts.map((post: PostType, index: number) => (
           <Post post={post} key={index} />
         ))}
-      </Grid>
+      </VStack>
       <Pagination currentPage={currentPage} numPages={numPages} />
     </Layout>
   );

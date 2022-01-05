@@ -15,7 +15,7 @@ module.exports = {
     },
     {
       label: "關於",
-      path: "/page/now/",
+      path: "/pages/now/",
     },
     {
       label: "科技",
@@ -24,6 +24,20 @@ module.exports = {
     {
       label: "旅遊",
       path: "/category/地圖",
+    },
+  ],
+  FOOTER_NAV: [
+    {
+      label: "主頁",
+      path: "/",
+    },
+    {
+      label: "我的 Setup",
+      path: "/pages/setup/",
+    },
+    {
+      label: "更新日誌",
+      path: "/pages/changelog/",
     },
   ],
   POSTS_PER_PAGE: 6,

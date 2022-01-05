@@ -11,7 +11,7 @@ import NextLink from "@/components/NextLink";
 export default function Tag({ children, href }: TagProps) {
   return (
     <ListItem>
-      <NextLink href={`/tag/${href.toLowerCase()}`} passHref>
+      <NextLink href={`/tag/${href.toLowerCase()}`} passHref variant="noeffect">
         <ChakraTag
           variant="subtle"
           px="3"

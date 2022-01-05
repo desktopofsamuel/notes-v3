@@ -11,6 +11,7 @@ export default function NextLink({
   replace,
   className,
   variant,
+  title,
   ...rest
 }: LinkProps) {
   const internal = /^\/(?!\/)/.test(href);
@@ -54,6 +55,7 @@ const defaultProps: LinkProps = {
   href: "",
   passHref: false,
   variant: "",
+  title: "",
 };
 
 type LinkProps = {
@@ -65,6 +67,7 @@ type LinkProps = {
   prefetch?: boolean;
   replace?: boolean;
   variant?: string;
+  title?: string;
 };
 
 NextLink.defaultProps = defaultProps;

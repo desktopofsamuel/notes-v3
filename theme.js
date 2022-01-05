@@ -149,12 +149,19 @@ const customTheme = extendTheme({
         transition: "all 100ms ease-in-out",
         // color: mode('red.900', 'whiteAlpha.100')(props),
       }),
+      variants: {
+        small: (props) => ({
+          margin: "0",
+          marginBottom: "2",
+          fontSize: "sm",
+        }),
+      },
     },
     Link: {
       baseStyle: (props) => ({
         transition: "all 500ms ease-in-out",
         borderBottomColor: "transparent",
-        color: "gray.600",
+        color: mode("gray.800", "white.300"),
         textDecoration: "none",
         _hover: {
           textDecoration: "none",
@@ -167,7 +174,6 @@ const customTheme = extendTheme({
           },
         }),
         postTitle: (props) => ({
-          color: "gray.800",
           _hover: {
             borderBottomColor: "transparent",
             textDecoration: "none",

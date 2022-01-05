@@ -16,20 +16,14 @@ export default function Pagination({
 
   if (numPages === 1) return <></>;
   return (
-    <Flex justifyContent="space-between" alignItems="center">
-      {!isFirst && (
-        <NextLink href={prevPage} passHref variant="noeffect">
-          <Button>Previous Page</Button>
-        </NextLink>
-      )}
-      <p>
-        Page {currentPage} of {numPages}{" "}
-      </p>
-      {!isLast && (
-        <NextLink href={nextPage} passHref variant="noeffect">
-          <Button>Next Page</Button>
-        </NextLink>
-      )}
+    <Flex justifyContent="space-between" alignItems="center" my="8">
+      <NextLink href={prevPage} passHref variant="noeffect">
+        <Button isDisabled={isFirst}>上一頁</Button>
+      </NextLink>
+
+      <NextLink href={nextPage} passHref variant="noeffect">
+        <Button isDisabled={isLast}>下一頁</Button>
+      </NextLink>
     </Flex>
   );
 }
