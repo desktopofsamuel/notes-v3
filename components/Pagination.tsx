@@ -1,6 +1,6 @@
 import { Flex, Button } from "@chakra-ui/react";
-import Link from "next/link";
 import internal from "stream";
+import NextLink from "@/components/NextLink";
 
 export default function Pagination({
   numPages,
@@ -18,21 +18,17 @@ export default function Pagination({
   return (
     <Flex justifyContent="space-between" alignItems="center">
       {!isFirst && (
-        <Link href={prevPage} passHref>
-          <a>
-            <Button>Previous Page</Button>
-          </a>
-        </Link>
+        <NextLink href={prevPage} passHref variant="noeffect">
+          <Button>Previous Page</Button>
+        </NextLink>
       )}
       <p>
         Page {currentPage} of {numPages}{" "}
       </p>
       {!isLast && (
-        <Link href={nextPage} passHref>
-          <a>
-            <Button>Next Page</Button>
-          </a>
-        </Link>
+        <NextLink href={nextPage} passHref variant="noeffect">
+          <Button>Next Page</Button>
+        </NextLink>
       )}
     </Flex>
   );

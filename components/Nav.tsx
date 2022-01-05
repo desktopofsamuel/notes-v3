@@ -41,7 +41,7 @@ export default function Header() {
       height={{ base: "initial", md: "100px" }}
     >
       <Flex direction="column">
-        <NextLink href="/" passHref variant="none">
+        <NextLink href="/" passHref variant="noeffect">
           <ChakraImage
             src="/profile.jpg"
             width={100}
@@ -51,7 +51,7 @@ export default function Header() {
           />
         </NextLink>
 
-        <NextLink href="/" passHref variant="none">
+        <NextLink href="/" passHref variant="noeffect">
           <Heading fontSize="medium" mt="4">
             Samuel W.
           </Heading>

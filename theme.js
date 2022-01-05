@@ -161,7 +161,7 @@ const customTheme = extendTheme({
         },
       }),
       variants: {
-        none: (props) => ({
+        noeffect: (props) => ({
           _hover: {
             borderBottomColor: "transparent",
           },
