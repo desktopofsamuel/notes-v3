@@ -73,9 +73,7 @@ const Music = () => {
         borderRadius="16"
         gridColumn={{ base: "span 2", md: "initial" }}
       >
-        <Text m="0" mb="2">
-          📚 最近在讀
-        </Text>
+        <Text variant="small">🎧 最近聽</Text>
         <SimpleGrid
           columns={2}
           row={2}

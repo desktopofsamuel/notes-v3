@@ -59,9 +59,7 @@ const Films = () => {
         gridColumn="span 2"
         width="100%"
       >
-        <Text m="0" mb="2">
-          🎬 最近在看
-        </Text>
+        <Text variant="small">🎬 最近看</Text>
         <Grid gridTemplateColumns="repeat(5, 1fr)" transform="scale(0.9)">
           {!data ? (
             <>
