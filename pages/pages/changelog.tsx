@@ -1,4 +1,4 @@
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout";
 import { UnorderedList, ListItem, Heading, Wrap, Text } from "@chakra-ui/react";
 import Entry from "@/components/Entry";
 
@@ -7,6 +7,12 @@ const Changelog = () => {
     <Layout title="更新日誌 Changelog">
       <Heading as="h2">更新日誌 Changelog</Heading>
       <UnorderedList>
+        <Entry
+          title="v3.0"
+          description='<p>主頁加了最近聽的音樂、看的電影和書籍，最方便的是自動從 Spotify 、Letterboxd 等平台更新，毋須自動。有興趣的話可看<a href="http://notes.desktopofsamuel.com/posts/gatsby-%E5%80%8B%E4%BA%BA%E7%8B%80%E6%B3%81%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0-%E6%95%B4%E5%90%88spotify%E9%9F%B3%E6%A8%82-letterboxd%E9%9B%BB%E5%BD%B1-%E6%9B%B8%E6%9C%AC%E7%B4%80%E9%8C%84/">教學↗</a></p>'
+          date="2021-08-13"
+          commit="15517d5b1c4dd6598ebd53818ea3260e02197b57"
+        />
         <Entry
           title="新增近期 Now"
           description='<p>主頁加了最近聽的音樂、看的電影和書籍，最方便的是自動從 Spotify 、Letterboxd 等平台更新，毋須自動。有興趣的話可看<a href="http://notes.desktopofsamuel.com/posts/gatsby-%E5%80%8B%E4%BA%BA%E7%8B%80%E6%B3%81%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0-%E6%95%B4%E5%90%88spotify%E9%9F%B3%E6%A8%82-letterboxd%E9%9B%BB%E5%BD%B1-%E6%9B%B8%E6%9C%AC%E7%B4%80%E9%8C%84/">教學↗</a></p>'

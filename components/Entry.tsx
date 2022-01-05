@@ -1,8 +1,6 @@
 import dayjs from "dayjs";
 import {
   Box,
-  Card,
-  Column,
   Heading,
   Text,
   Button,
@@ -14,10 +12,17 @@ import {
   Flex,
   ListItem,
 } from "@chakra-ui/react";
-import GatsbyLink from "@/components/gatsby-link";
-import Link from "@/components/NextLink";
+import NextLink from "@/components/NextLink";
 
-const Entry = ({ title, date, commit, description, image, link, label }) => {
+const Entry = ({
+  title,
+  date,
+  commit,
+  description,
+  image,
+  link,
+  label,
+}: any) => {
   return (
     <ListItem>
       <Box>
@@ -40,16 +45,15 @@ const Entry = ({ title, date, commit, description, image, link, label }) => {
               {title}
             </Heading>
             <Box m="0" dangerouslySetInnerHTML={{ __html: description }}></Box>
-            <Link
+            <NextLink
               href={`https://github.com/desktopofsamuel/notes-v2/commit/${commit}`}
               title="View Commit on Github"
               target="_blank"
-              isExternal
             >
               <Text fontFamily="mono" color="gray.500">
                 {commit.substring(0, 6)}
               </Text>
-            </Link>
+            </NextLink>
           </Box>
         </Grid>
       </Box>
