@@ -49,10 +49,10 @@ const feed = new RSS({
   description: CONFIG.DESCRIPTION,
   feed_url: CONFIG.URL + `/rss.xml`,
   site_url: CONFIG.URL,
-  managingEditor: "Drew Bolles",
+  managingEditor: CONFIG.AUTHOR_NAME,
   webMaster: CONFIG.AUTHOR_NAME,
   copyright: CONFIG.COPYRIGHT,
-  language: "en",
+  language: "zh-HK",
   pubDate: new Date().toLocaleString(),
   ttl: "60",
 });

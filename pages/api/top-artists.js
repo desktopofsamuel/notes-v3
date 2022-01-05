@@ -10,7 +10,5 @@ export default async function TopArtist(_, res) {
     link: artist.external_urls.spotify,
   }));
 
-  console.log(artists);
-
   return res.status(200).json(artists);
 }

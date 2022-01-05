@@ -98,7 +98,7 @@ export default function Header() {
             <FaFigma />
           </SocialIcon>
           <SocialIcon
-            href="https://notes.desktopofsamuel.com/rss.xml/"
+            href="https://follow.it/desktop-of-samuel?action=followPub"
             label="Link to RSS"
           >
             <FaRss />
