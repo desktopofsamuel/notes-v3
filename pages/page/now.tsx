@@ -25,7 +25,6 @@ export default function AboutPage() {
           <Button leftIcon={<FaInstagram />}>我的 Instagram</Button>
         </Link>
       </HStack>
-      <Now />
     </Layout>
   );
 }

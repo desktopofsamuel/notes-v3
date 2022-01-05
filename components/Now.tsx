@@ -1,16 +1,16 @@
 import Films from "@/components/Films";
 import Books from "@/components/Books";
 import Music from "@/components/Music";
-import { VStack } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 
 export default function Now() {
   return (
     <>
-      <VStack spacing="4">
+      <SimpleGrid columns={2} spacing={4} mb="8">
         <Films />
         <Books />
         <Music />
-      </VStack>
+      </SimpleGrid>
     </>
   );
 }
