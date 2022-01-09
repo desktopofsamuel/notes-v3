@@ -65,16 +65,18 @@ fs.readdirSync(blogPostDir)
     const fullPath = path.join(blogPostDir, fileName);
     // read the file so we can grab the front matter
     const file = fs.readFileSync(fullPath, "utf8");
+
     // for the RSS feed we don't need the html, we
     // just want the attributes
     const { data: frontmatter, content } = matter(file);
-    const excerpt = getExcerpt(content, 400);
-    console.log(excerpt);
+    const excerpt = getExcerpt(content, 800);
+    // console.log(excerpt);
     // I want access to the fileName later on so we save it to our object
     return { ...frontmatter, fileName, excerpt };
   })
   // sort the items by date in descending order, feel free
   // to customize this as needed to sort your RSS items properly
+  .filter((post) => post.draft === false)
   .sort((a, b) => +new Date(b.date) - +new Date(a.date))
   // loop over each blog post and add it to our RSS feed
   .forEach(({ title, date, tags, category, fileName, excerpt }) => {
@@ -83,7 +85,7 @@ fs.readdirSync(blogPostDir)
     feed.item({
       title,
       description: excerpt,
-      url: CONFIG.URL + `/posts/` + `${fileName.replace(".md", "")}`,
+      url: CONFIG.URL + `/posts/` + `${fileName.replace(".md", "")}` + `/`,
       author: CONFIG.AUTHOR_NAME,
       categories: tags,
       date,
