@@ -13,12 +13,18 @@ import Pagination from "@/components/Pagination";
 import { getAllTopics } from "@/lib/getTopics";
 import { getPosts } from "@/lib/posts";
 import { PostType } from "@/types/post";
+import CONFIG from "../../config";
+import { NextSeo } from "next-seo";
 
 const TagPage = ({ posts, tagName }: { posts: any; tagName: string }) => {
   return (
-    <Layout title="Create Next App">
-      <Heading>Tags with {tagName}</Heading>
-      <Text> Hello from the otherside.</Text>
+    <Layout title={`所有關於"${tagName}"的文章`}>
+      <NextSeo
+        openGraph={{
+          url: CONFIG.URL + `/tags/` + tagName,
+        }}
+      />
+      <Heading>#{tagName}</Heading>
       <Grid>
         {posts.map((post: PostType, index: number) => (
           <Post post={post} key={index} />

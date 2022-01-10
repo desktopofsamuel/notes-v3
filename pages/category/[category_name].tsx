@@ -11,6 +11,8 @@ import Pagination from "@/components/Pagination";
 import { getPosts } from "@/lib/posts";
 import { PostType } from "@/types/post";
 import ImagePost from "@/components/ImagePost";
+import CONFIG from "../../config";
+import { NextSeo } from "next-seo";
 
 const CategoryPage = ({
   posts,
@@ -20,8 +22,13 @@ const CategoryPage = ({
   categoryName: string;
 }) => {
   return (
-    <Layout title={`Posts in ${categoryName}`}>
-      <Heading>Posts in {categoryName}</Heading>
+    <Layout title={`${categoryName}的文章`}>
+      <NextSeo
+        openGraph={{
+          url: CONFIG.URL + `/category/` + categoryName,
+        }}
+      />
+      <Heading>#{categoryName}</Heading>
 
       {categoryName == "地圖" ? (
         <SimpleGrid spacing="4" columns={{ base: 1, sm: 2 }}>

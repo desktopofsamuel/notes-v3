@@ -5,12 +5,12 @@ import fs from "fs";
 import path from "path";
 import Post from "@/components/Post";
 import { sortByDate } from "../../utils";
-import { POSTS_PER_PAGE } from "@/config/index";
+import { POSTS_PER_PAGE } from "../../config";
 import Pagination from "@/components/Pagination";
 import { getPosts } from "@/lib/posts";
 import { PostType } from "@/types/post";
 import Now from "@/components/Now";
-
+import CONFIG from "../../config";
 const HomePage = ({
   posts,
   numPages,
@@ -21,10 +21,15 @@ const HomePage = ({
   currentPage: number;
 }) => {
   return (
-    <Layout>
-      <Heading fontSize="md">近期 Now</Heading>
-
-      {currentPage == 1 && <Now />}
+    <Layout
+      title={currentPage == 1 ? "" : `所有文章 —— 第` + currentPage + `頁`}
+    >
+      {currentPage == 1 && (
+        <>
+          <Heading fontSize="md">近期 Now</Heading>
+          <Now />
+        </>
+      )}
       <VStack spacing="8">
         {posts.map((post: PostType, index: number) => (
           <Post post={post} key={index} />

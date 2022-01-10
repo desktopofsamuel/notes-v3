@@ -9,6 +9,8 @@ import Link from "next/link";
 import { PostType } from "@/types/post";
 import Tag from "@/components/Tag";
 import { getExcerpt } from "@/lib/getExcerpt";
+import { NextSeo } from "next-seo";
+import CONFIG from "../../config";
 
 export default function ContentPageTemplate({
   frontmatter,
@@ -22,7 +24,19 @@ export default function ContentPageTemplate({
       keywords={frontmatter.tags}
       description={excerpt}
     >
-      {/* <SEO postFrontmatter={frontmatter} path={slug} postSEO /> */}
+      <NextSeo
+        openGraph={{
+          url: CONFIG.URL + `/pages/` + slug,
+          type: "website",
+          images: [
+            {
+              url: frontmatter.socialImage
+                ? CONFIG.URL + frontmatter.socialImage
+                : CONFIG.URL + CONFIG.OG_IMAGE,
+            },
+          ],
+        }}
+      />
       <Heading>{frontmatter.title}</Heading>
       {console.log(excerpt)}
       {/* <img src={socialImage} alt="" /> */}

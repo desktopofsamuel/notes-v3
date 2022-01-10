@@ -25,7 +25,7 @@ import {
   FaSun,
 } from "react-icons/fa";
 import SocialIcon from "@/components/SocialIcon";
-import { MENU, BIO } from "@/config/index";
+import { MENU, BIO } from "../config";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();

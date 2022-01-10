@@ -19,6 +19,8 @@ import Tag from "@/components/Tag";
 import dayjs from "dayjs";
 import NextLink from "@/components/NextLink";
 import { getExcerpt } from "@/lib/getExcerpt";
+import CONFIG from "../../config";
+import { NextSeo } from "next-seo";
 
 export default function PostPage({
   frontmatter,
@@ -29,9 +31,28 @@ export default function PostPage({
   return (
     <Layout
       title={frontmatter.title}
-      keywords={frontmatter.tags}
       description={excerpt}
+      keywords={frontmatter.tags}
     >
+      <NextSeo
+        openGraph={{
+          url: CONFIG.URL + `/posts/` + slug,
+          type: "article",
+          article: {
+            publishedTime: frontmatter.date,
+            tags: frontmatter.tags,
+            authors: [CONFIG.URL],
+          },
+
+          images: [
+            {
+              url: frontmatter.socialImage
+                ? CONFIG.URL + frontmatter.socialImage
+                : CONFIG.URL + CONFIG.OG_IMAGE,
+            },
+          ],
+        }}
+      />
       {/* <SEO postFrontmatter={frontmatter} path={slug} postSEO /> */}
       <HStack spacing="2">
         <Text

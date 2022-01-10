@@ -2,7 +2,7 @@ const RSS = require("rss");
 const fs = require("fs");
 const matter = require("gray-matter");
 const path = require("path");
-const CONFIG = require("./config/index.js");
+const CONFIG = require("./config.js");
 
 const blogPostDir = path.resolve(__dirname, "content", "posts");
 
@@ -52,7 +52,7 @@ const feed = new RSS({
   managingEditor: CONFIG.AUTHOR_NAME,
   webMaster: CONFIG.AUTHOR_NAME,
   copyright: CONFIG.COPYRIGHT,
-  language: "zh-HK",
+  language: CONFIG.LOCALE,
   pubDate: new Date().toLocaleString(),
   ttl: "60",
 });
