@@ -8,7 +8,6 @@ import path from "path";
 import matter from "gray-matter";
 import Post from "@/components/Post";
 import { sortByDate } from "../../utils";
-import { POSTS_PER_PAGE } from "@/config/index";
 import Pagination from "@/components/Pagination";
 import { getAllTopics } from "@/lib/getTopics";
 import { getPosts } from "@/lib/posts";
