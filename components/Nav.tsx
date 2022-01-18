@@ -38,6 +38,7 @@ export default function Header() {
       mb={{ base: "8", md: "0" }}
       position={{ base: "initial", md: "sticky" }}
       top={{ base: "0", md: "4" }}
+      height={{ base: "initial", md: "100px" }}
     >
       <Flex direction="column">
         <NextLink href="/" passHref variant="noeffect">

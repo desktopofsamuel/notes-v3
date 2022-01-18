@@ -3,7 +3,7 @@ import Image from "next/image";
 import dayjs from "dayjs";
 import { PostType } from "@/types/post";
 import { Button, HStack, Text, Box, Heading } from "@chakra-ui/react";
-import { FaArrowRight } from "react-icons/fa";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import NextLink from "@/components/NextLink";
 
 export default function Post({ post }: { post: PostType }) {
@@ -34,11 +34,12 @@ export default function Post({ post }: { post: PostType }) {
         </Heading>
       </NextLink>
       <Text noOfLines={3}>{post.excerpt}</Text>
-      <NextLink href={`/posts/${post.slug}`}>
-        <Button rightIcon={<FaArrowRight />} variant="ghost" ml="-18px">
+
+      <Button rightIcon={<ArrowForwardIcon />} variant="ghost" ml="-18px">
+        <NextLink variant="noeffect" href={`/posts/${post.slug}`}>
           閱讀更多
-        </Button>
-      </NextLink>
+        </NextLink>
+      </Button>
     </Box>
   );
 }

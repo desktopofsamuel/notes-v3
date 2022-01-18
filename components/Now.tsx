@@ -7,9 +7,9 @@ export default function Now() {
   return (
     <>
       <SimpleGrid columns={2} spacing={4} mb="8">
-        <Films />
-        <Books />
         <Music />
+        <Books />
+        <Films />
       </SimpleGrid>
     </>
   );

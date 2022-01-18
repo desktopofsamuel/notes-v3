@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import useSWR from "swr";
-import Parser from "rss-parser";
 import NextLink from "./NextLink";
 import {
   Text,
@@ -11,7 +10,8 @@ import {
   Flex,
   Wrap,
 } from "@chakra-ui/react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
+import fetcher from "@/lib/fetcher";
 
 const Books = () => {
   // const [feed, setFeed] = useState({ title: "", items: [] });
@@ -32,17 +32,19 @@ const Books = () => {
   //   rssData();
   // }, []);
 
-  function fetcher(url) {
-    let parser = new Parser();
-    const result = parser.parseURL(url);
-    console.log(result);
-    return result;
-  }
+  // function fetcher(url) {
+  //   let parser = new Parser();
+  //   const result = parser.parseURL(url);
+  //   console.log(result);
+  //   return result;
+  // }
 
-  const { data, error } = useSWR(
-    "https://damp-lowlands-80262.herokuapp.com/oku",
-    fetcher
-  );
+  const { data } = useSWR("/api/book", fetcher);
+
+  // const { data, error } = useSWR(
+  //   "https://damp-lowlands-80262.herokuapp.com/oku",
+  //   fetcher
+  // );
 
   // if (error) return "An error has occurred.";
   // if (!data) return "Loading...";
@@ -60,25 +62,22 @@ const Books = () => {
         {!data ? (
           <p>Loading </p>
         ) : (
-          data.items.slice(0, 5).map((item, i) => (
+          data.map((item, i) => (
             <Box key={i} mb="4">
               <NextLink
                 fontSize="lg"
                 fontWeight="bold"
                 lineHeight="0"
                 href={item.link}
-                title={`Read more about ${item.title} on Oku`}
+                title={`Read more about ${item.name} on Oku`}
                 target="_blank"
                 isExternal
               >
-                <Wrap spacing="2">
-                  <Text>{item.title}</Text>
-                  <FaExternalLinkAlt />
-                </Wrap>
+                {item.name} <ExternalLinkIcon mx="2px" />
               </NextLink>
 
               <Text m="0" fontSize="xs" textTransform="uppercase">
-                by {item.creator}
+                by {item.author}
               </Text>
             </Box>
           ))

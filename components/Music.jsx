@@ -14,7 +14,7 @@ import {
   Image,
   keyframes,
 } from "@chakra-ui/react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+
 import fetcher from "@/lib/fetcher";
 // import Image from "next/image";
 
@@ -82,131 +82,106 @@ const Music = () => {
           justifyContent="center"
         >
           {console.log(data)}
-          {
-            !data ? (
-              <p>Loading </p>
-            ) : (
-              data.map((artist, i) => (
-                <Center textAlign="center" flexDirection="column" key={i}>
-                  <NextLink
-                    title={`Listen to ${artist.name} now on Spotify`}
-                    target="_blank"
-                    href={artist.link}
-                    variant="noeffect"
-                    isExternal
+          {!data ? (
+            <p>Loading </p>
+          ) : (
+            data.map((artist, i) => (
+              <Center textAlign="center" flexDirection="column" key={i}>
+                <NextLink
+                  title={`Listen to ${artist.name} now on Spotify`}
+                  target="_blank"
+                  href={artist.link}
+                  variant="noeffect"
+                  isExternal
+                >
+                  <Box
+                    w="80px"
+                    h="80px"
+                    role="group"
+                    backgroundColor="black"
+                    borderRadius="50%"
+                    position="relative"
+                    transition="all 100ms ease-in-out"
                   >
                     <Box
+                      position="absolute"
+                      zIndex="100"
+                      top="26px"
+                      left="26px"
+                      opacity={0}
+                      w="25px"
+                      h="25px"
+                      right="0"
+                      bottom="0"
+                      color="white"
+                      transition="all 100ms ease-in-out"
+                      _groupHover={{ opacity: 1 }}
+                    >
+                      {/* <FaVolumeDown size="20px" /> */}
+                      <Box
+                        position="relative"
+                        display="flex"
+                        justifyContent="space-between"
+                        width="30px"
+                        height="30px"
+                      >
+                        <Box
+                          backgroundColor="white"
+                          width="4px"
+                          height="100%"
+                          borderRadius="6px"
+                          animation={animation}
+                          transformOrigin="bottom"
+                        />
+                        <Box
+                          backgroundColor="white"
+                          width="4px"
+                          height="100%"
+                          borderRadius="6px"
+                          animation={animation}
+                          transformOrigin="bottom"
+                          style={{ animationDelay: "-2.2s" }}
+                        />
+                        <Box
+                          backgroundColor="white"
+                          width="4px"
+                          height="100%"
+                          borderRadius="6px"
+                          animation={animation}
+                          transformOrigin="bottom"
+                          style={{ animationDelay: "-3.7s" }}
+                        />
+                        <Box
+                          backgroundColor="white"
+                          width="4px"
+                          height="100%"
+                          borderRadius="6px"
+                          animation={animation}
+                          transformOrigin="bottom"
+                          style={{ animationDelay: "-4.2s" }}
+                        />
+                      </Box>
+                    </Box>
+                    <Image
+                      position="absolute"
+                      top="0"
+                      left="0"
+                      zIndex="1"
                       w="80px"
                       h="80px"
-                      role="group"
-                      backgroundColor="black"
+                      src={artist.image}
+                      alt={artist.name}
                       borderRadius="50%"
-                      position="relative"
-                      transition="all 100ms ease-in-out"
-                    >
-                      <Box
-                        position="absolute"
-                        zIndex="100"
-                        top="26px"
-                        left="26px"
-                        opacity={0}
-                        w="25px"
-                        h="25px"
-                        right="0"
-                        bottom="0"
-                        color="white"
-                        transition="all 100ms ease-in-out"
-                        _groupHover={{ opacity: 1 }}
-                      >
-                        {/* <FaVolumeDown size="20px" /> */}
-                        <Box
-                          position="relative"
-                          display="flex"
-                          justifyContent="space-between"
-                          width="30px"
-                          height="30px"
-                        >
-                          <Box
-                            backgroundColor="white"
-                            width="4px"
-                            height="100%"
-                            borderRadius="6px"
-                            animation={animation}
-                            transformOrigin="bottom"
-                          />
-                          <Box
-                            backgroundColor="white"
-                            width="4px"
-                            height="100%"
-                            borderRadius="6px"
-                            animation={animation}
-                            transformOrigin="bottom"
-                            style={{ animationDelay: "-2.2s" }}
-                          />
-                          <Box
-                            backgroundColor="white"
-                            width="4px"
-                            height="100%"
-                            borderRadius="6px"
-                            animation={animation}
-                            transformOrigin="bottom"
-                            style={{ animationDelay: "-3.7s" }}
-                          />
-                          <Box
-                            backgroundColor="white"
-                            width="4px"
-                            height="100%"
-                            borderRadius="6px"
-                            animation={animation}
-                            transformOrigin="bottom"
-                            style={{ animationDelay: "-4.2s" }}
-                          />
-                        </Box>
-                      </Box>
-                      <Image
-                        position="absolute"
-                        top="0"
-                        left="0"
-                        zIndex="1"
-                        w="80px"
-                        h="80px"
-                        src={artist.image}
-                        alt={artist.name}
-                        borderRadius="50%"
-                        _groupHover={{ opacity: 0.8 }}
-                      />
-                    </Box>
-                  </NextLink>
-                  <Text m="0" mt={2}>
-                    {artist.name}
-                  </Text>
-                </Center>
-              ))
-            )
-            // (
-            //   data.items.slice(0, 5).map((item, i) => (
-            //     <Box key={i} mb="4">
-            //       <NextLink
-            //         fontSize="lg"
-            //         fontWeight="bold"
-            //         lineHeight="0"
-            //         href={item.link}
-            //         title={`Read more about ${item.title} on Oku`}
-            //         target="_blank"
-            //         isExternal
-            //       >
-            //         <HStack>
-            //           <Text>{item.title}</Text> <FaExternalLinkAlt />
-            //         </HStack>
-            //       </NextLink>
-
-            //       <Text m="0" fontSize="xs" textTransform="uppercase">
-            //         by {item.creator}
-            //       </Text>
-            //     </Box>
-            //   ))
-            // )
-          }
+                      _groupHover={{ opacity: 0.8 }}
+                    />
+                  </Box>
+                </NextLink>
+                <Text m="0" mt={2}>
+                  {artist.name}
+                </Text>
+              </Center>
+            ))
+          )}
         </SimpleGrid>
       </Box>
     </>
