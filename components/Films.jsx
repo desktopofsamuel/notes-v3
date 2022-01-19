@@ -5,48 +5,10 @@ import Parser from "rss-parser";
 import NextLink from "./NextLink";
 import { Text, Grid, Tooltip, Box, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
+import fetcher from "@/lib/fetcher";
 
 const Films = () => {
-  // const [feed, setFeed] = useState({ title: "", items: [] });
-
-  /* ImageParser for Letterboxd Film Poster */
-  function imageParser(htmlString) {
-    let imgLink = null;
-    const searchTerm = `\"/></p>`;
-    const imgTagPosition = htmlString.indexOf(searchTerm);
-    const elements = htmlString.slice(14, imgTagPosition); // Delete string after the img tag
-    imgLink = elements.replace("0-500-0-750", "0-200-0-300"); // Load a smaller image
-    return imgLink;
-  }
-
-  // const rssData = async () => {
-  //   // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-  //   let parser = new Parser();
-
-  //   try {
-  //     const feed = await parser.parseURL(
-  //       `https://damp-lowlands-80262.herokuapp.com/letterboxd`
-  //     );
-  //     setFeed(feed);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   rssData();
-  // }, []);
-
-  function fetcher(url) {
-    let parser = new Parser();
-    const result = parser.parseURL(url);
-    console.log(result);
-    return result;
-  }
-
-  const { data, error } = useSWR(
-    "https://damp-lowlands-80262.herokuapp.com/letterboxd",
-    fetcher
-  );
+  const { data, error } = useSWR("/api/film", fetcher);
 
   // if (error) return "An error has occurred.";
   // if (!data) return "Loading...";
@@ -63,25 +25,9 @@ const Films = () => {
         <Text variant="small">🎬 最近看</Text>
         <Grid gridTemplateColumns="repeat(5, 1fr)" transform="scale(0.9)">
           {!data ? (
-            <>
-              <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box backgroundColor="black" alt="Placeholder Image"></Box>
-              </Box>{" "}
-              <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box backgroundColor="black" alt="Placeholder Image"></Box>
-              </Box>{" "}
-              <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box backgroundColor="black" alt="Placeholder Image"></Box>
-              </Box>{" "}
-              <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box backgroundColor="black" alt="Placeholder Image"></Box>
-              </Box>
-              <Box mr="-30px" boxShadow="2px 0 7px grey;">
-                <Box backgroundColor="black" alt="Placeholder Image"></Box>
-              </Box>
-            </>
+            <Box height={200} width="100%"></Box>
           ) : (
-            data.items.slice(0, 5).map((item, i) => (
+            data.map((item, i) => (
               <Box
                 key={i}
                 mr="-30px"
@@ -94,12 +40,12 @@ const Films = () => {
                 boxShadow="2px 0 7px grey;"
               >
                 <NextLink href={item.link} target="_blank">
-                  <Tooltip label={item.title} fontSize="md" mt="10px">
+                  <Tooltip label={item.name} fontSize="md" mt="10px">
                     <img
-                      src={imageParser(item.content)}
+                      src={item.image}
                       width="200"
                       height="300"
-                      alt={item.title}
+                      alt={item.name}
                     ></img>
                   </Tooltip>
                 </NextLink>
