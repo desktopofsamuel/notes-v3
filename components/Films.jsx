@@ -8,7 +8,7 @@ import Image from "next/image";
 import fetcher from "@/lib/fetcher";
 
 const Films = () => {
-  const { data, error } = useSWR("/api/film", fetcher);
+  const { data, error } = useSWR("/api/films", fetcher);
 
   // if (error) return "An error has occurred.";
   // if (!data) return "Loading...";

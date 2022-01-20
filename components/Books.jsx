@@ -39,7 +39,7 @@ const Books = () => {
   //   return result;
   // }
 
-  const { data } = useSWR("/api/book", fetcher);
+  const { data } = useSWR("/api/books", fetcher);
 
   // const { data, error } = useSWR(
   //   "https://damp-lowlands-80262.herokuapp.com/oku",

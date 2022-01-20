@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       label: "科技",
-      path: "/tag/tech/",
+      path: "/category/桌面/",
     },
     {
       label: "旅遊",
