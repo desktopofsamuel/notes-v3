@@ -77,7 +77,7 @@ export default function PostPage({
           </Text>
         </NextLink>
       </HStack>
-      <Heading variant="pagetitle" mt="2" mb="8">
+      <Heading as="h1" variant="pagetitle" mt="2" mb="8">
         {frontmatter.title}
       </Heading>
       {console.log(excerpt)}

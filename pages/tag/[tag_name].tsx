@@ -13,17 +13,20 @@ import { getAllTopics } from "@/lib/getTopics";
 import { getPosts } from "@/lib/posts";
 import { PostType } from "@/types/post";
 import CONFIG from "../../config";
+import startCase from "lodash.startcase";
 import { NextSeo } from "next-seo";
+import { POSTS_PER_PAGE } from "../../config";
 
 const TagPage = ({ posts, tagName }: { posts: any; tagName: string }) => {
+  const pageTitle = startCase(tagName);
   return (
-    <Layout title={`所有關於"${tagName}"的文章`}>
+    <Layout title={`所有關於"${pageTitle}"的文章`}>
       <NextSeo
         openGraph={{
           url: CONFIG.URL + `/tags/` + tagName,
         }}
       />
-      <Heading>#{tagName}</Heading>
+      <Heading as="h1">#{pageTitle}</Heading>
       <Grid>
         {posts.map((post: PostType, index: number) => (
           <Post post={post} key={index} />

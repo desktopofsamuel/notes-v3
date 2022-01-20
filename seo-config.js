@@ -9,7 +9,11 @@ export default {
     title: "Desktop of Samuel 數位筆記",
     description: "UI/UX 設計師，談談科技、Gadget心得。",
     url: CONFIG.URL,
-    image: CONFIG.OG_IMAGE,
+    images: [
+      {
+        url: CONFIG.URL + CONFIG.OG_IMAGE,
+      },
+    ],
     type: "website",
     locale: CONFIG.LOCALE,
     site_name: CONFIG.TITLE,

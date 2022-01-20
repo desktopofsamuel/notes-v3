@@ -9,7 +9,7 @@ import NextLink from "@/components/NextLink";
 export default function Post({ post }: { post: PostType }) {
   // console.log(post);
   return (
-    <Box as="article">
+    <Box as="article" mb="6">
       <HStack as="span" spacing="2">
         <Text
           as="time"
@@ -33,8 +33,9 @@ export default function Post({ post }: { post: PostType }) {
           {post.frontmatter.title}
         </Heading>
       </NextLink>
-      <Text noOfLines={3}>{post.excerpt}</Text>
-
+      <Text noOfLines={3} my="2">
+        {post.excerpt}
+      </Text>
       <Button rightIcon={<ArrowForwardIcon />} variant="ghost" ml="-18px">
         <NextLink variant="noeffect" href={`/posts/${post.slug}`}>
           閱讀更多
