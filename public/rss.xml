@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Desktop of Samuel 數位筆記]]></title><description><![CDATA[UI/UX 設計師，談談科技、Gadget心得。]]></description><link>https://notes-v3.vercel.app</link><generator>RSS for Node</generator><lastBuildDate>Wed, 19 Jan 2022 03:55:44 GMT</lastBuildDate><atom:link href="https://notes-v3.vercel.app/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Invalid Date</pubDate><copyright><![CDATA[© 版權所有]]></copyright><language><![CDATA[zh-hk]]></language><managingEditor><![CDATA[Samuel W.]]></managingEditor><webMaster><![CDATA[Samuel W.]]></webMaster><ttl>60</ttl><item><title><![CDATA[2021電影回顧：Larger Than Life]]></title><description><![CDATA[跟朋友談起 No Way Home，笑道一生人到底要看多少次蜘蛛俠和蝙蝠俠。朋友說 Marvel 電影的本質已成一種消費模式。我也認同，這龐大又漫長的電影宇宙內，每套電影情節只像電視劇裡的幾集，加起來就成為全世界最大製作、最高預算、一線演員湊成的連續劇，還打破銀幕的界限，橫跨電影、電視劇、串流平台的模式。說到這裡，這已經是另一的 Genre，不是 Film Culture 而更是 Pop Culture 的一部分。我們難以指望它做到電影本來的功能，要賦予意義，撼動心靈，見微知著，看見世界。這也解釋得到多年來的電影回顧，Marvel 電影只也是屈指可數。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Desktop of Samuel 數位筆記]]></title><description><![CDATA[UI/UX 設計師，談談科技、Gadget心得。]]></description><link>https://notes-v3.vercel.app</link><generator>RSS for Node</generator><lastBuildDate>Thu, 20 Jan 2022 15:50:25 GMT</lastBuildDate><atom:link href="https://notes-v3.vercel.app/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Invalid Date</pubDate><copyright><![CDATA[© 版權所有]]></copyright><language><![CDATA[zh-hk]]></language><managingEditor><![CDATA[Samuel W.]]></managingEditor><webMaster><![CDATA[Samuel W.]]></webMaster><ttl>60</ttl><item><title><![CDATA[2021電影回顧：Larger Than Life]]></title><description><![CDATA[跟朋友談起 No Way Home，笑道一生人到底要看多少次蜘蛛俠和蝙蝠俠。朋友說 Marvel 電影的本質已成一種消費模式。我也認同，這龐大又漫長的電影宇宙內，每套電影情節只像電視劇裡的幾集，加起來就成為全世界最大製作、最高預算、一線演員湊成的連續劇，還打破銀幕的界限，橫跨電影、電視劇、串流平台的模式。說到這裡，這已經是另一的 Genre，不是 Film Culture 而更是 Pop Culture 的一部分。我們難以指望它做到電影本來的功能，要賦予意義，撼動心靈，見微知著，看見世界。這也解釋得到多年來的電影回顧，Marvel 電影只也是屈指可數。
 說回正題，今年花不少時間整理舊 Excel、Google Sheet 的觀影紀錄，自己 09 年開始有記下自己看的電影，而十大電影回顧則最早追溯至 2014 年。我相信也是同一原因，讓我每年花時間比較電影，不斷糾正自己想看、愛看的電影。
 今年乖乖課金 Letterboxd ， Pro 會員終於可以分享自己的觀影 Statistic。
 1. Nomadland (Chloé Zhao, 2021)
@@ -135,7 +135,81 @@ https://youtu.be/84WTdDbQw1I
 觀及三代的網誌，其實也是平行存在的，只不過是按有發佈文章的年期分割。
 Xanga （? - 2013 ）時寫的東西，還是不要獻醜，Wordpress 世代律很有興致分了兩個網誌，一個是個人的（2008-2017），另一個是科技（2011-2014）。兩邊或許中間也轉過不少 theme，不過始終也是也使用免費的 Wordpress.com 而非自行架站的開源 Wordpress。
 Medium 第一天開放的時候，我已經是用戶，當年還是搶著註冊 @samuelwong 的用戶名（後來註冊個人網頁才統一成 @desktopofsamuel） 。
-當時還有一封來自創辦人 Ev Williams 的邀請信。Medium 初期的文章以英語為主，華文博客世界大約是 17 年紛紛跳槽到本來英語為主 Medium 上寫文。Medium 本來以收費模式分帳予作者，是個頗理想的方式讓人可以寫文為生。不過，Medium 的付費牆越來越大的時候，先前的熱潮倒成了逃亡潮，幾個有名 Medium Publications（如 The Mission 、Hackernoon 和 F]]></description><link>https://notes-v3.vercel.app/posts/談再整理自己的文章上-5分鐘匯出-medium-和-wordpress-文章至-Markdown/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/談再整理自己的文章上-5分鐘匯出-medium-和-wordpress-文章至-Markdown/</guid><category><![CDATA[Markdown]]></category><category><![CDATA[Medium]]></category><category><![CDATA[Wordpress]]></category><category><![CDATA[網誌]]></category><category><![CDATA[Gatsby]]></category><category><![CDATA[React]]></category><category><![CDATA[Static Site Generator]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Mon, 24 Feb 2020 05:02:29 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】 Box Opening]]></title><description><![CDATA[新的 MacBook Pro 已經使用超過 24 小時了，心裡還是有種說不出的興奮，但要指出的是，從 PC 轉到 Mac 這過程的確不易，不過當然是值得的，遇到的問題還要打多好幾篇，希望可以幫助到想用 Mac 的人。
+當時還有一封來自創辦人 Ev Williams 的邀請信。Medium 初期的文章以英語為主，華文博客世界大約是 17 年紛紛跳槽到本來英語為主 Medium 上寫文。Medium 本來以收費模式分帳予作者，是個頗理想的方式讓人可以寫文為生。不過，Medium 的付費牆越來越大的時候，先前的熱潮倒成了逃亡潮，幾個有名 Medium Publications（如 The Mission 、Hackernoon 和 F]]></description><link>https://notes-v3.vercel.app/posts/談再整理自己的文章上-5分鐘匯出-medium-和-wordpress-文章至-Markdown/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/談再整理自己的文章上-5分鐘匯出-medium-和-wordpress-文章至-Markdown/</guid><category><![CDATA[Markdown]]></category><category><![CDATA[Medium]]></category><category><![CDATA[Wordpress]]></category><category><![CDATA[網誌]]></category><category><![CDATA[Gatsby]]></category><category><![CDATA[React]]></category><category><![CDATA[Static Site Generator]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Mon, 24 Feb 2020 05:02:29 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】Macbook 省電大法]]></title><description><![CDATA[最近開學，我才真的經常帶電腦回校上課，才知道省電的重要性。
+先說說 MacBook Pro 的電池，從 2011 的型號來說，跟據 Apple 網站，就說三個不同型號的電量都是有七小時的上網時間。 而 MacBook Air 的電池，11 吋就有 5 小時，13 吋則有 7 小時。上了這麼天課，當然知道這是 BS。
+即使現在我在家中，馬上拔掉電源，按電池的 Icon ，也只是估計有約 4 小時的電池。當然這要看你使用的電腦的習慣，但從我的經驗來說，四小時的瀏覽網站、文書工作，也大概是我的 13 吋 MacBook Pro 的極限。
+手提電腦的電池，人人也不多，又在懶的情況下，不帶差電器。最好的方法就是省電！ 我有幾招教授，希望可以令大家的電腦，可以用得越久。
+1. 熒幕亮度，越光越耗電，所以快快按 F1 來調整光暗吧！當然，電腦已在你移去充電插頭時自動調暗，但我所說的是，有幾暗得幾暗，若你真的打算用整天的話，一格便是你的最佳選擇了。(一格都沒有其實關掉了熒幕)
+2. 關掉鍵盤的背光，除非你在甚麼也看不見的地方，那麼鍵盤的背光其實作用有限的，F5, F6 就是調節背光的亮度，如果完全沒有需要，索性於 System Preference – Keyboard ，把 Automatically illuminate keyboard in low light 的選項 uncheck 吧。
+3. No Multi-tasking，盡量關上所有的軟件，關上不是按下左上角紅色 X，而是該軟件在 Dock 中不再出現，或底下沒有一光點。[該光點標示了哪些軟件正在運行] 。如果 Dock 根本無出現任何光點，請於 System Preference – Dock 中重新選擇 Show Indicator Lights for open applications。
+4. 即使上網也不要開]]></description><link>https://notes-v3.vercel.app/posts/2011-09-09-mac上手筆記-macbook-省電大法/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-09-09-mac上手筆記-macbook-省電大法/</guid><category><![CDATA[Mac上手筆記]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Fri, 09 Sep 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】中文輸入法]]></title><description><![CDATA[相信有興趣買 Mac 的人也擔心中文輸入的問題，畢竟輸入中文也是一部電腦的重要功用。要等這麼久，原因是我在電腦展才  買下了九方輸入法，我才真正 100%能以正常速度輸入中文，負責文字工作，包括為這網站寫文。
+輸入法的設定，其實在 Menu Bar 的美國國旗 Icon，美國國旗即 US，按下再按 Open Language & Text Preference 便可以設定輸入法。
+讓我先作介紹 Mac 內置的中文輸入法：
+繁體中文可用注音，拼音，倉頡，速成和手寫。
+要注意的是倉頡和速成，在 Mac 上是較 Windows 新一代的，換言之，某些字的輸入碼會因而改變，詳情可見 Mactivity 的詳盡介紹。
+但另一十分吸引的是從 Snow Leopard 此加入的手寫辨識，適用於支援 Multi-touch Trackpad 的 Mac，當然新買 Macbook 會內置。先剔選手寫輸入法，回到輸入的地方，按 Control+Shift+Space，視窗以上便出現類似的手寫輸入介面，按下右邊四格也相應按下有關選字，但使用時鼠標的功能將會暫停，可按左下角的暫停，便回到正常介面。若不嫌手寫速度慢的話，其實也是一個免費的方法輸入中文。
+有人曾於網上建議可用香草輸入法或奇摩輸入法，便可用回 Windows 的配置。
+但其實小弟自幼已用慣了九方輸入法，說我不願學新事物也好，九方確實是我的一杯茶，家父也間中慨嘆若當年九方公司若願意開放版權，相對速成和倉頡，九方的易學、簡單，絕對會改變電腦中  文輸入法的歷史。
+雖然如此，現時九方也仍有一定用家，即使在 iPhone, Android 之上，也開發了相關的輸入法，唯問題是收費而已。在買正版軟件，其實我已下載了其試用版，但  試用版在升級至 Lion 上執行時卻會不斷閃爍，未能正常使用。
+所以購買時，我再三向售貨員確認我買的 Mac Q]]></description><link>https://notes-v3.vercel.app/posts/2011-08-27-mac上手筆記-中文輸入法/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-08-27-mac上手筆記-中文輸入法/</guid><category><![CDATA[Mac上手筆記]]></category><category><![CDATA[中文輸入法]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Sat, 27 Aug 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】兩個熒幕]]></title><description><![CDATA[開始時先說好了，這次分享不是教學，因為到現在我還未找到一個免費的解決方法。
+也許先前我提過，我在家裡換了房間，只剩了一部 MacBook Pro(原本還有部 PC)。那我便帶著我剩下的熒幕和電腦來到新房間，當然我的大計就是 Extended Display 吧。雖然 13 吋是夠用，但每人也會大熒幕吧。先作申報，我的熒幕是 HP 的 2309p，是原廠電腦加錢買的。
+問題來了：
+我去了電腦商場買了個 Mini Displayport 轉 HDMI 的轉換器。
+起初回家初用時還沒有問題，熒幕的解析度還是完美的 1080p，但當我重新開機後，桌面便放大了。在 System Preference 找了找，在 Display 那裡拉 Underscan 的 bar，便可以放大縮小桌面的比例。
+但問題是：
+解析度因 Underscan 而不再如 1080p 般清晰
+解決問題的好朋友 Google 便出現了，找到的是一大堆 Mac Mini  連到電視的同樣問題。雖然有關問題的討論有很多，但是一個通用的解決方法卻未出現過。因為解決主要在兩個層面，一是顯示器方面，二是電腦方面。顯示器方面，我曾 Factory Reset 過、摸熟了其設定、還是無法按下那 Auto-Scale 的鍵。 電腦方面，卻有人建議安裝第三方軟件，我試了 SwitchResX，卻無法有效改善這問題，也許是因為我用試用版的問題。
+至今，我的第二熒幕還是有點朦查查，但彷彿我已經看慣了，只要我不把網頁拖過去，對看影片來說，這種解析度還是可以接受。但我心裡知道也許唯一的解決辦法是轉用 VGA Converter，因為網上有很多人說 HDMI 無法支援自動調整解析  度，但 VGA 卻會。有錢再買 VGA 線時，再通知大家。]]></description><link>https://notes-v3.vercel.app/posts/2011-09-04-mac上手筆記-兩個熒幕/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-09-04-mac上手筆記-兩個熒幕/</guid><category><![CDATA[Mac上手筆記]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Sat, 27 Aug 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】我不說可能你不記得的功能]]></title><description><![CDATA[使用 Mac OS 其實很像玩遊戲，很多寶物也在自己身邊，等待自己發掘，是一大趣味來的。讓我分享分享。
+1. Multi-touch
+Mac 的 Multi-Touch 功能其實十分完善，猶其對使用 Macbook 系列的用家特別有幫助，至於 iMac，其實新的 iMac 可讓你任選 Magic Trackpad 或 Magic Mouse 其一，使用 Multi-touch 功能難度並不大。 Trackpad 和 Multi-touch 軟硬技術合作之下，才使 Mac 的用家體驗這樣完美。
+Snow Leopard 內置的 Multi-Touch 功能其實有頗多選擇的，不夠的話，網上也有一些軟件增加手勢，使運作 Mac 時更加順暢。上圖是 System Preference 的 Trackpad 的配置
+- Tap To Click: 每次 Click 也要按一下實體鍵實在太麻煩，所以一 Tap 便算了，誤按的機會其實也不多。
+- Secondary Click (Bottom Right Corner): Mac 是沒有 Right Button，它有另一名字叫 Secondary Button，也許是用得 Window 多習慣了，用家可以自設定按那一角落是 Secondary Click 了。[用兩隻手指 tap 其實也有相同的效果]
+- Scroll with Inertia: 純是習慣了，看得自然些
+- Rotate, Pinch Open & Close: 在 iOS 用慣了，沒理由不懂吧
+- Screen Zoom: 為幫助視力有問題的人吧，按住 Control，用兩指拉上是 Zoom In，拉下是 Zoom Out，其實 iOS 的 Accessibility 也有三指 tap 的放大功能。
+- Swipe To Navigate: 多用於 Mac OS 內]]></description><link>https://notes-v3.vercel.app/posts/2011-05-30-mac上手筆記-我不說可能你不記得的功能/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-05-30-mac上手筆記-我不說可能你不記得的功能/</guid><category><![CDATA[Mac上手筆記]]></category><category><![CDATA[Multitouch]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Mon, 30 May 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[心靜自然涼]]></title><description><![CDATA[星期五跟朋友去了土地灣行山，已經很久沒有行山了，上次也許已經是上年秋季。今次行一段，較長又崎嶇的路段，其實我有點兒擔心。
+時間：2:45 - 5:15
+地點：土地灣至大浪灣
+地圖：由郊野樂行提供
+這段其實是港島徑的第八段，看回相關的介紹才知道這是港島徑各段中最長的一段，但也是亞洲的名徑之一，曾被國際雜誌譽為亞洲最佳登山路線。是否最佳我不清楚，只知山頂看下的景色其實十分美麗的。
+到達出發的起點其實要從港鐵筲箕灣站乘 9 號巴士到土地灣站，整條路線其實也難認，最好叫司機提點下吧。土地灣站於蓮鶴仙觀一站之後，會看見左邊山邊有一大入口，側邊亦有告示版以及地圖。
+這段港島徑其實亦有名為龍脊郊遊徑，龍脊指的我想就是港島東部的打爛埕頂山、雲枕山一帶，山與山的山脊連在一起像龍的背脊一樣吧。初段全是上斜以及凹凸不平的沙石路，並不好走，但盼著走上山頂，更上一層樓的心態，終於上了山頂，看了好風景。
+打爛埕頂山的山頂沒有甚麼特叫，要走到雲枕山一帶才有龍脊觀景台，山脊的路走起上來也是上上落，途中也有些沙石路十分斜，不得不有些擔心下坡時會否危險，因上山重心向前不會有太大危險，但下斜重心卻是向背山，一失足便向前掉了。令人咋舌的是人走的石頭旁竟有給單車走的路，如此陡斜還能踏單車，實在令人側目。
+走到雲枕山上，有數張長椅，我們數位朋友便坐著休息，從那兒看的風景還真美，心曠神怡，左邊遠方是將軍澳，近在山邊便是目的地—大浪灣，還有數個私人哥爾夫球場，以及石澳。後面則可見，紅山半島及赤柱。我坐在長椅上，輕閉雙眼，感受著微微從海岸而至，略帶鹽味的爽朗海風，聽遠方浪的拍打聲，以及沙灘遊人嬉戲的叫聲，心跳也驟然減慢，回復了靜逸的心情。友人還興起脫去上衣，赤著上身走，我卻言「心靜自然涼」。
+路途至此才不到一半，卻已看了全部的風光，因剩下將下坡至山腰，較為平坦的沙石路，繞過歌連臣山，若走多一小時才到落大潭峽或石澳道的分岔路]]></description><link>https://notes-v3.vercel.app/posts/2011-05-29-心靜自然涼/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-05-29-心靜自然涼/</guid><category><![CDATA[郊野]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Sun, 29 May 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】Mac 特享 App]]></title><description><![CDATA[Mac 其實較 Windows 優勝之處也就在它的軟件，不知為甚麼，很多功能簡單得來，使用廣泛、介面精美的軟件都是於 Mac 獨享的。先讓我撇下 Apple 的自家軟件不說，從免費的軟件開始介紹一下。
+其實在 Lion Sneak Peek 時，Mac App Store 的提早發佈已為 Lion 鋪路，為的就是使在 Lion 的正式公佈時，蘋果可以大大聲聲說 Mac App Store 已是一個成熟的市場，作為 Mac 軟件的銷售平台，不要忘記，每個收費軟件於 Mac App Store 的 30%收益是屬於蘋果的。
+有時候在手提電腦上看電影，卻無奈被那 Screensaver 所阻擋，一掃看電影的雅興。Caffeine 只為此功能，於 Menu Bar 上出現，有一咖啡杯，按一下就能倒滿，意思是開通宵工作，自動關掉所有關屏或 Screensaver 的動作。 很多時候，軟件都不是只講求多功能，能夠有效、簡單的做到其工作，已經很足夠了。
+Alfred 是一個比 Spotlight 更強大的軟件，按下了快捷鍵 (我設定了 alt+space)，一頂帽子連同一條 text bar，然後便可以直接搜尋任電腦內及網上的資料，還可以自訂 Search Engine，包保要找的一定找到。Search 後直接按相關結果的快捷鍵(Command1,2,3,4..)，是開啟程式、搜尋的最快方法。筆者在 Windows 時，找一軟件，按 Windows 鍵，苦苦於” 所有程式” 內慢慢尋找，相比起來 Mac 還是天堂。
+我是一個很愛音樂的人，最怕一首歌播到中間便要 Pause，這情況於聽著 iPhone 回家時更加常見，Seamless 就解決了這問題，透過 Wifi 連接到 Mac 的 Seamless 軟件，iPhone 的音樂可以在按 Transfer 鍵時開始音量漸細，而 Mac 的]]></description><link>https://notes-v3.vercel.app/posts/2011-05-17-mac上手筆記-mac-特享app/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-05-17-mac上手筆記-mac-特享app/</guid><category><![CDATA[Mac上手筆記]]></category><category><![CDATA[App]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Mon, 16 May 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】My Menu Bar]]></title><description><![CDATA[很多人也愛介紹自己的 Dock，我卻喜歡介紹 Menu Bar，以上 Menu Bar 的各 Icon 都是我每天都會用得上的軟件或小工具，雖然 Icon 細細，但 Menu Bar 位置不多，所以保持 Menu Bar 整潔也 十分重要。
+從左邊說起：左一 Cloud
+從 Mac App Store 下載回來，一開始先登記，以後將檔案 Drag 於 Dock 上的 Icon，便會自動上載至雲端，很多我的 Screenshot 也是這樣，十分方便快捷。按回 Menu Bar Icon 更可看回最近上載文件的捷徑和點擊次數。
+Free http://itunes.apple.com/us/app/cloud/id417602904?mt=12
+左二: Trillian
+Mac 的 MSN 十分不濟，所以大部分 Mac 用家都是使用第三方軟件，其中絕大部分是用 Adium，不過我較喜歡 Trillian，介面設計簡單，但只支援普通對話，傳送檔案、多方聊天也有很多 Bug。有提議不妨跟我交流交流
+Free http://www.trillian.im/mac/ [另外亦有 iPhone Version]
+左三:Adobe Updater
+左四:Belkin Router Monitor [最近轉了新 Router，稍後再說]
+左五:Dropbox，本想作為 Mac 與 PC 間交換檔案的中介，但速度還是不太滿意，所以還是沒有天天使用
+左六:Divvy 很正的視窗管理，按下 Shortcut 後，便會彈出一個細小的 Pop-up
+然後於格仔中劃出你想視窗大小的比例，便自動 Resize。
+Shareware with Demo http://mizage.com/divvy/
+左七: Caffeine
+先前已介紹過，自動關閉所有 Screensaver 和 Screen Off
+h]]></description><link>https://notes-v3.vercel.app/posts/2011-06-22-mac上手筆記-my-menu-bar/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-06-22-mac上手筆記-my-menu-bar/</guid><category><![CDATA[Mac上手筆記]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Mon, 16 May 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】iTunes 轉移大法]]></title><description><![CDATA[最近一星期有點兒忙，無法及時分享我遇到的趣事和難題。其實轉用 Mac 對我來說還是一大工程，首先，我並非由 Windows 轉至 Mac，而是兩者共用，所以我既要兼顧 Windows 和 Mac 兩方面。
+當務之急要轉移的是 iTunes，Windows 的 iTunes 數月來不時會自動關閉，令到同步 iPhone, iPad 時並不順利，再者，iTunes 內音樂、影片等都是我重要數據，透過轉移 iTunes，我七成的資料已經轉到 Macbook Pro 裡。
+以往我重裝電腦，往往我都是直接 Copy iTunes Music Folder，再於新作業系統開啟舊的 iTunes 資料庫[前提是有 Consolidate 所有檔案]，所以比較簡單。但是，當你由 Windows 轉 Mac 時，主要面對的問題是
+1. 所有檔案的 Path 不同 [Windows 有 C, D Drives 出現於每個 iTunes Library 的 xml 裡，而 Mac 則沒有，若以我上述方法 Copy and Paste，所有歌曲將不能找到]
+2. 中文歌曲亂碼
+我 Google 了好幾個方法，卻部分成功
+1. 於 File – Library – Organize Library 中點選 Consolidate Files 和 Reorganize Files
+2. Copy 整個 iTunes Folder [應在我的音樂裡的 iTunes]
+3. 使用 TextWrangler 等 Text 修改軟件，使用 Find & Replace 功能，將所有檔案的路徑更改 (Eg. 由 file://localhost/D:/Music/iTunes/Music/ 改為 file://localhost/Users/你的名字/Music/iTunes)
+4. 於 iTunes 載入時長]]></description><link>https://notes-v3.vercel.app/posts/2011-05-14-mac上手筆記-itunes-轉移大法/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-05-14-mac上手筆記-itunes-轉移大法/</guid><category><![CDATA[Mac上手筆記]]></category><category><![CDATA[iTunes]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Sat, 14 May 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[放假以後]]></title><description><![CDATA[考完試了，昨晚我還在夢見自己還有一科未考，天天早上還是準時的七時起床，可說是不太習慣。要數放假後最有意義的事，是當了三日散工，為某大公司的 Training Program  作 IT Support。於君悅酒店上班，有冷氣、會場有 Coffee Break, Lunch, Afternoon Break，全是酒店的自助餐，午膳也在那兒吃了。面對的人，全是外國來的 Manager, Regional Head，整天也在說英文，我也覺得自己英文好了。
+工作主要是把單位的 iPad  搬來搬去，再解決任何網絡問題，沒有的話就可以在走廊外吃吃喝喝。很難說這非優差吧，最珍貴的是，Program  有數次請了嘉賓來演講，說的都是 Leadership，做人態度等等，非常有啟發性。能夠旁聽這些演講，也是一個難忘的經驗吧。我記下了幾句 quote：
+"The Price of Innocence is Powerless"
+"If your not part of the solution, your part of the problem"
+再一次多謝 Auntie Shirley  介紹這份工作給我！]]></description><link>https://notes-v3.vercel.app/posts/2011-05-14-放假以後/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-05-14-放假以後/</guid><category><![CDATA[暑假]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Sat, 14 May 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】 Box Opening]]></title><description><![CDATA[新的 MacBook Pro 已經使用超過 24 小時了，心裡還是有種說不出的興奮，但要指出的是，從 PC 轉到 Mac 這過程的確不易，不過當然是值得的，遇到的問題還要打多好幾篇，希望可以幫助到想用 Mac 的人。
 畢竟我非專業開箱，我還是隨隨便便的拍幾張照，再用 iPhoto Enhance，然後便直接在 WordPress 上載了。還是沒有甚麼特別好說的，我留意到的是包裝其實得小，盡用空間，為的是減少貨運容量和空易收納吧，現在箱子放在房裡亦非一大問題，不像些大桌機，盒子大得嚇人，原放電腦，可能以為是電視機呢。盒中亦送貼紙一張，蘋果兩個！
 我買的是 2.7GHz Intel Core i7，用起上來大致沒有 lag，特別情況是 iTunes 更改 Info 時按下一首要等好幾秒，輕機的情況還是沒有，大多問題是 Chrome 一天 Crash 一次，還是要好好努力呢！至於其真正實力，有待我安裝 Final Cut Studio 和 Adobe Collection！]]></description><link>https://notes-v3.vercel.app/posts/2011-05-08-mac上手筆記-box-opening/</link><guid isPermaLink="true">https://notes-v3.vercel.app/posts/2011-05-08-mac上手筆記-box-opening/</guid><category><![CDATA[Mac上手筆記]]></category><dc:creator><![CDATA[Samuel W.]]></dc:creator><pubDate>Sun, 08 May 2011 00:00:00 GMT</pubDate></item><item><title><![CDATA[【Mac上手筆記】 Wait]]></title><description><![CDATA[上回說了點題外話，哈哈，大概也是發牢騷吧，畢竟自己心情緊張。昨天，五月四日，終於在早上在 Apple Online Store 訂購了 13″ i7 High End 的型號，沒有外加件何東西，結帳為 HKD$10688。當時確認購買後已立即有一個 Order Number，本以為可以立即追蹤 Shipment，但事實上，送貨卻比樂觀的理想中差遠了。
 首先，Online Store 上寫著：「估計付運時間: 24 小時內免費運送」，上網查清後才發現，付運只是蘋果將貨品交給地區速遞公司，然後速遞公司再送貨到你手上，又是另一回事。你可以說這樣是 cheating，或文字遊戲，蘋果公司確實有需要寫出來吧，否則不等到交易成功，是不會出現預計送貨時間的。
