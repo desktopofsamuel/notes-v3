@@ -4,6 +4,7 @@ import { Container, Grid, Box } from "@chakra-ui/react";
 import Nav from "@/components/Nav";
 import { NextSeo } from "next-seo";
 import FooterNav from "@/components/FooterNav";
+import { LOCALE } from "config";
 
 export default function Layout({
   title,
@@ -13,6 +14,9 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <>
+      <Head>
+        <html lang={LOCALE} />
+      </Head>
       <NextSeo
         title={title}
         description={description}
