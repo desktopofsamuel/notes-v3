@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import { Container, Grid, Box } from "@chakra-ui/react";
 import Nav from "@/components/Nav";
@@ -14,9 +13,6 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <>
-      <Head>
-        <html lang={LOCALE} />
-      </Head>
       <NextSeo
         title={title}
         description={description}
