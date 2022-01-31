@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://notes-v3.vercel.app
+
+# Sitemaps
+Sitemap: https://notes-v3.vercel.app/sitemap.xml
+Sitemap: https://notes-v3.vercel.app/sitemap-0.xml

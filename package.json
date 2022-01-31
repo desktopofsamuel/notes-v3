@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "node rss-gen"
+    "postbuild": "node rss-gen && next-sitemap",
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",
@@ -42,6 +42,7 @@
     "babel-plugin-superjson-next": "^0.4.2",
     "eslint": "8.5.0",
     "eslint-config-next": "12.0.7",
+    "next-sitemap": "^2.1.5",
     "rss": "^1.2.2",
     "typescript": "4.5.4"
   }
