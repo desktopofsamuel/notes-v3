@@ -9,8 +9,8 @@ const Changelog = () => {
       <UnorderedList>
         <Entry
           title="v3.0"
-          description='<p>主頁加了最近聽的音樂、看的電影和書籍，最方便的是自動從 Spotify 、Letterboxd 等平台更新，毋須自動。有興趣的話可看<a href="http://notes.desktopofsamuel.com/posts/gatsby-%E5%80%8B%E4%BA%BA%E7%8B%80%E6%B3%81%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0-%E6%95%B4%E5%90%88spotify%E9%9F%B3%E6%A8%82-letterboxd%E9%9B%BB%E5%BD%B1-%E6%9B%B8%E6%9C%AC%E7%B4%80%E9%8C%84/">教學↗</a></p>'
-          date="2021-08-13"
+          description="繼續活學活用的旅程，Notes 已來到v3的更新，改用了 NextJS，還是在用 Chakra UI。自訂 API 和 SWR 讓 Now 一頁自動更新，不用再等網誌更新才再 Build。訂閱表格轉回新的 RSS Newsletter。"
+          date="2022-01-31"
           commit="15517d5b1c4dd6598ebd53818ea3260e02197b57"
         />
         <Entry

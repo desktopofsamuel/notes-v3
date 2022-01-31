@@ -106,8 +106,10 @@ export async function getStaticProps({
   const posts = getPosts();
 
   // Filter post by tag
-  const filteredPosts = posts.filter((post) =>
-    post.frontmatter.tags.map((t: any) => t.toLowerCase()).includes(tag_name)
+  const filteredPosts = posts.filter(
+    (post) =>
+      post.frontmatter.tags &&
+      post.frontmatter.tags.map((t: any) => t.toLowerCase()).includes(tag_name)
   );
 
   return {
