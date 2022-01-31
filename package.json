@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "node rss-gen && next-sitemap",
+    "postbuild": "node rss-gen && next-sitemap"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",

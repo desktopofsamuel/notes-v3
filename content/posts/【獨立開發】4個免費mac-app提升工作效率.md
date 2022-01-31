@@ -1,5 +1,4 @@
 ---
-template: post
 title: 【獨立開發】4個免費 Mac App 提升工作效率
 slug: 【獨立開發】4個免費mac-app提升工作效率
 draft: false
