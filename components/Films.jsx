@@ -22,9 +22,9 @@ const Films = () => {
   // if (error) return "An error has occurred.";
   // if (!data) return "Loading...";
 
-  const CustomCard = React.forwardRef(({ children, item, ...rest }, ref) => (
+  const CustomCard = React.forwardRef(({ children, ...rest }, ref) => (
     <Box display="flex" ref={ref}>
-      <Image width={200} height={300} alt={item.name} {...rest} />
+      <Image width={200} height={300} alt="" {...rest} />
     </Box>
   ));
 
