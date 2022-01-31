@@ -1,9 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useSWR from "swr";
 import Parser from "rss-parser";
 import NextLink from "./NextLink";
-import { Text, Grid, Tooltip, Box, useColorModeValue } from "@chakra-ui/react";
+import {
+  chakra,
+  Text,
+  Grid,
+  Tooltip,
+  Box,
+  Tag,
+  ImageProps,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import fetcher from "@/lib/fetcher";
 
@@ -12,6 +21,14 @@ const Films = () => {
 
   // if (error) return "An error has occurred.";
   // if (!data) return "Loading...";
+
+  const CustomCard = React.forwardRef(({ children, item, ...rest }, ref) => (
+    <Box display="flex" ref={ref}>
+      <Image width={200} height={300} alt={item.name} {...rest} />
+    </Box>
+  ));
+
+  CustomCard.displayName = "CustomCard";
 
   return (
     <>
@@ -31,7 +48,9 @@ const Films = () => {
               <Box
                 key={i}
                 mr="-30px"
-                zIndex={i}
+                zIndex={i * -1}
+                borderRadius="4px"
+                overflow="hidden"
                 transition="all 100ms ease-in-out"
                 _hover={{
                   zIndex: "100",
@@ -39,14 +58,10 @@ const Films = () => {
                 }}
                 boxShadow="2px 0 7px grey;"
               >
-                <NextLink href={item.link} target="_blank">
+                <NextLink href={item.link} target="_blank" variant="noeffect">
                   <Tooltip label={item.name} fontSize="md" mt="10px">
-                    <img
-                      src={item.image}
-                      width="200"
-                      height="300"
-                      alt={item.name}
-                    ></img>
+                    {/* <CustomImage src={item.image} alt={item.name} ref={ref} /> */}
+                    <CustomCard src={item.image} alt={item.name} />
                   </Tooltip>
                 </NextLink>
               </Box>

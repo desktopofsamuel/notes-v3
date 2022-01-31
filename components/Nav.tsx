@@ -42,13 +42,14 @@ export default function Header() {
     >
       <Flex direction="column">
         <NextLink href="/" passHref variant="noeffect">
-          <ChakraImage
-            src="/profile.jpg"
-            width={100}
-            height={100}
-            alt="logo"
+          <Box
+            overflow="hidden"
             borderRadius="50%"
-          />
+            height="100px"
+            width="100px"
+          >
+            <Image src="/profile.jpg" width={100} height={100} alt="logo" />
+          </Box>
         </NextLink>
 
         <NextLink href="/" passHref variant="noeffect">

@@ -11,9 +11,10 @@ import {
   useColorModeValue,
   Tooltip,
   Center,
-  Image,
+  Image as ChakraImage,
   keyframes,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
 import fetcher from "@/lib/fetcher";
 // import Image from "next/image";
@@ -77,7 +78,8 @@ const Music = () => {
         <SimpleGrid
           columns={2}
           row={2}
-          spacing={4}
+          spacingX={4}
+          spacingY={8}
           alignItems="center"
           justifyContent="center"
         >
@@ -162,21 +164,27 @@ const Music = () => {
                         />
                       </Box>
                     </Box>
-                    <Image
+                    <Box
                       position="absolute"
+                      overflow="hidden"
                       top="0"
                       left="0"
                       zIndex="1"
                       w="80px"
                       h="80px"
-                      src={artist.image}
-                      alt={artist.name}
                       borderRadius="50%"
                       _groupHover={{ opacity: 0.8 }}
-                    />
+                    >
+                      <Image
+                        src={artist.image}
+                        alt={artist.name}
+                        width={80}
+                        height={80}
+                      />
+                    </Box>
                   </Box>
                 </NextLink>
-                <Text m="0" mt={2}>
+                <Text m="0" mt={2} fontSize="sm" lineHeight="short">
                   {artist.name}
                 </Text>
               </Center>

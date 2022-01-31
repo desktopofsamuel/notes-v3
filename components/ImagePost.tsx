@@ -18,7 +18,7 @@ const NextImage = chakra(Image);
 export default function Post({ post }: { post: PostType }) {
   // console.log(post);
   return (
-    <NextLink href={`/posts/${post.slug}`} key={post.slug}>
+    <NextLink href={`/posts/${post.slug}`} key={post.slug} variant="noeffect">
       <Box
         role="group"
         height="500px"
