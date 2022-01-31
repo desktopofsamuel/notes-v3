@@ -23,7 +23,7 @@ const TagPage = ({ posts, tagName }: { posts: any; tagName: string }) => {
     <Layout title={`所有關於"${pageTitle}"的文章`}>
       <NextSeo
         openGraph={{
-          url: CONFIG.URL + `/tags/` + tagName,
+          url: CONFIG.URL + `/tag/` + tagName,
         }}
       />
       <Heading as="h1">#{pageTitle}</Heading>
