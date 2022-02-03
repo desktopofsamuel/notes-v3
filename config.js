@@ -3,7 +3,7 @@ module.exports = {
   TITLE_SHORT: "Notes of Samuel",
   DESCRIPTION: "UI/UX 設計師，談談科技、Gadget心得。",
   KEYWORDS: "科技,設計,UI,UX,旅行,城市,香港",
-  URL: "https://notes-v3.vercel.app",
+  URL: "https://notes.desktopofsamuel.com",
   PATH_PREFIX: "",
   USERNAME: "@desktopofsamuel",
   EMAIL: "",
