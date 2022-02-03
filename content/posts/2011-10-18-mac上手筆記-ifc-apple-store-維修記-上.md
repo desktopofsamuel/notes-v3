@@ -13,13 +13,13 @@ socialImage: "/media/mac-apple-store-repair-1.png"
 
 ## Part 1: 風扇幹甚麼
 
-其實已經是數個星期前的事了，MBP 要處理的事一多，便會燙火的那樣熱，而風扇亦會轟轟作響，那晚就是這樣，無端端書桌上卻傳來一陣燶味， 用先前提及過的[風扇調節軟件檢查](/posts/mac上手筆記-macbook-省電大法)，卻發現 Right Fan 的讀數是-1，深感不妙，恐怕有人風扇已經壞了。便拿起以前的 iPad 托架，臨時托起電腦，希望不會因為過熱而融化內部的零件。
+其實已經是數個星期前的事了，MBP 要處理的事一多，便會燙火的那樣熱，而風扇亦會轟轟作響，那晚就是這樣，無端端書桌上卻傳來一陣燶味，用先前提及過的[風扇調節軟件檢查](/posts/mac上手筆記-macbook-省電大法)，卻發現 Right Fan 的讀數是-1，深感不妙，恐怕有人風扇已經壞了。便拿起以前的 iPad 托架，臨時托起電腦，希望不會因為過熱而融化內部的零件。
 
 但至此以後，系統的運作卻未嘗有異，但拿去維修快則幾天，耐則需要一星期，對於天天使用的我還是會產生不便，所以事情便擱在一邊有待解決。
 
 ## Part 2: Apple Store 開幕
 
-Apple Store 的開幕，自然簡化了拿電腦去維修的程序，只需要  跟 Genius Bar 預約便可以，比起其他大公司的維修中心，拿籌號等待更加方便。預約的程序很簡單，可以於[Apple 的網站](http://www.apple.com/hk/retail/geniusbar/)預約或[下載 Apple Store 的 App](http://itunes.apple.com/hk/app/apple-store/id375380948?mt=8)
+Apple Store 的開幕，自然簡化了拿電腦去維修的程序，只需要  跟 Genius Bar 預約便可以，比起其他大公司的維修中心，拿籌號等待更加方便。預約的程序很簡單，可以於[Apple 的網站](http://www.apple.com/hk/retail/geniusbar/)預約或[下載 Apple Store 的 App](http://itunes.apple.com/hk/app/apple-store/id375380948?mt=8)
 
 ![](/media/mac-apple-store-repair-1.png)
 
