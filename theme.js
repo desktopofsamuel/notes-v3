@@ -236,9 +236,15 @@ const customTheme = extendTheme({
       p: {
         color: mode("gray.600", "indigo.300")(props),
         my: "4",
+
+        a: {
+          color: mode("primary.500", "primary.400")(props),
+          borderBottomWidth: "1px",
+          borderBottomColor: mode("primary.500", "primary.400")(props),
+        },
       },
       a: {
-        // color: 'primary.500',
+        // color: mode("primary.500", "primary.400")(props),
         // _hover: {
         //   borderBottomWidth: '1px',
         //   borderBottomColor: 'primary.500',
