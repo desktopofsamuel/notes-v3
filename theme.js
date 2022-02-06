@@ -1,5 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
+
 // import Heading from '@/components/element/heading';
 
 const customTheme = extendTheme({
@@ -284,8 +285,25 @@ const customTheme = extendTheme({
       li: {
         color: mode("gray.600", "indigo.300")(props),
       },
+      // pre: {
+      //   my: "2",
+      //   whiteSpace: "pre-wrap",
+      //   fontSize: "sm",
+      //   lineHeight: "short",
+      //   backgroundColor: "gray.200",
+      // },
+      // code: {
+      //   padding: "1",
+      //   margin: "2 0",
+      //   backgroundColor: "gray.200",
+      //   borderRadius: "2",
+      // },
       iframe: {
         py: "8",
+      },
+      blockquote: {
+        fontSize: "lg",
+        fontStyle: "italic",
       },
     }),
   },

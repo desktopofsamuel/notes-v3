@@ -27,8 +27,8 @@ export default function Layout({
         <Grid
           gridTemplateColumns={{
             base: "100%",
-            md: "200px auto",
-            lg: "200px minmax(0,1px) auto",
+            md: "200px minmax(0,1fr)",
+            lg: "200px minmax(0,1px) minmax(0,1fr)",
           }}
           py="10"
           gap={{ base: "0", md: "2", lg: "10" }}
