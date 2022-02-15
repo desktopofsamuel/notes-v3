@@ -10,6 +10,9 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import * as ga from "../lib/google-analytics";
+import "@/styles/prism-theme.css";
+import NextNProgress from "nextjs-progressbar";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -39,6 +42,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}');
       `}
       </Script>
+      <Head>
+        <link rel="icon" href="/icons/favicon.svg" />
+        <link rel="mask-icon" href="mask-icon.svg" color="#0077CC" />
+        <link rel="apple-touch-icon" href="/icons/favicon.png" />
+      </Head>
+      <NextNProgress height={4} color="#FAA91A" />
       <ChakraProvider resetCSS={true} theme={customTheme}>
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
