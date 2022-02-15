@@ -69,7 +69,8 @@ const Music = () => {
   return (
     <>
       <Box
-        backgroundColor={useColorModeValue("gray.100", "gray.700")}
+        backgroundColor={useColorModeValue("gray.50", "gray.700")}
+        boxShadow="xs"
         p="4"
         borderRadius="16"
         gridColumn={{ base: "span 2", md: "initial" }}
@@ -100,10 +101,13 @@ const Music = () => {
                     w="80px"
                     h="80px"
                     role="group"
-                    backgroundColor="black"
                     borderRadius="50%"
                     position="relative"
-                    transition="all 100ms ease-in-out"
+                    backgroundColor="transparent"
+                    transition="all 500ms ease-in-out"
+                    _hover={{
+                      backgroundColor: "black",
+                    }}
                   >
                     <Box
                       position="absolute"
@@ -116,7 +120,7 @@ const Music = () => {
                       right="0"
                       bottom="0"
                       color="white"
-                      transition="all 100ms ease-in-out"
+                      transition="all 500ms ease-in-out"
                       _groupHover={{ opacity: 1 }}
                     >
                       {/* <FaVolumeDown size="20px" /> */}

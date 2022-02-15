@@ -52,7 +52,8 @@ const Books = () => {
   return (
     <>
       <Box
-        backgroundColor={useColorModeValue("gray.100", "gray.700")}
+        backgroundColor={useColorModeValue("gray.50", "gray.700")}
+        boxShadow="xs"
         p="4"
         borderRadius="16"
         gridColumn={{ base: "span 2", md: "initial" }}
