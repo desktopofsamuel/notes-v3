@@ -44,10 +44,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Script>
       <Head>
         <link rel="icon" href="/icons/favicon.svg" />
-        <link rel="mask-icon" href="mask-icon.svg" color="#0077CC" />
+        <link rel="mask-icon" href="mask-icon.svg" color="#000000" />
         <link rel="apple-touch-icon" href="/icons/favicon.png" />
       </Head>
-      <NextNProgress height={4} color="#FAA91A" />
+      <NextNProgress height={4} color="#0077CC" />
       <ChakraProvider resetCSS={true} theme={customTheme}>
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
