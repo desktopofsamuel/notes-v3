@@ -57,14 +57,22 @@ export default function Header() {
             Samuel W.
           </Heading>
         </NextLink>
-        <Box dangerouslySetInnerHTML={{ __html: BIO }} />
+        <Box
+          display={{ base: "none", md: "block" }}
+          dangerouslySetInnerHTML={{ __html: BIO }}
+        />
       </Flex>
       {/* Menu */}
       <VStack
         gap={{ base: "2", md: "8" }}
         alignItems={{ base: "flex-end", md: "flex-start" }}
       >
-        <UnorderedList spacing="2" marginInlineStart="0" mb="8">
+        <UnorderedList
+          spacing="2"
+          marginInlineStart="0"
+          mb="8"
+          textAlign={{ base: "right", md: "inherit" }}
+        >
           {MENU.map((item) => (
             <ListItem key={item.path} listStyleType="none">
               <NextLink href={item.path} variant="navigation">
@@ -120,6 +128,7 @@ export default function Header() {
           onClick={toggleColorMode}
           isRound
           icon={colorMode === `light` ? <FaMoon /> : <FaSun />}
+          display={{ base: "none", md: "inherit" }}
         />
       </VStack>
     </Grid>

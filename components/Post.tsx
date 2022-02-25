@@ -9,7 +9,7 @@ import NextLink from "@/components/NextLink";
 export default function Post({ post }: { post: PostType }) {
   // console.log(post);
   return (
-    <Box as="article" mb="6">
+    <Box as="article" mb="6" display="grid" justifyItems="baseline">
       <HStack as="span" spacing="2">
         <Text
           as="time"

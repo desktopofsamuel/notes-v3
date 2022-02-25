@@ -175,9 +175,13 @@ const customTheme = extendTheme({
           },
         }),
         postTitle: (props) => ({
+          paddingBottom: "2px",
+          borderBottom: "1.5px dotted rgba(0,0,0,0)",
+          transition: "all 0.1s ease-in-out",
+          display: "inline",
           _hover: {
-            borderBottomColor: "transparent",
             textDecoration: "none",
+            borderBottom: "1.5px dotted darkgrey",
           },
         }),
         navigation: (props) => ({
@@ -212,13 +216,6 @@ const customTheme = extendTheme({
           fontSize: "2xl",
           my: "0",
           lineHeight: "tall",
-          paddingBottom: "6px",
-          borderBottom: "1.5px dotted rgba(0,0,0,0)",
-          transition: "all 0.1s ease-in-out",
-          display: "inline",
-          _hover: {
-            borderBottom: "1.5px dotted darkgrey",
-          },
         },
         heading: {
           fontSize: "3xl",
