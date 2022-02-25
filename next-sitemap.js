@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://notes-v3.vercel.app",
+  siteUrl: "https://notes.desktopofsamuel.com",
   generateRobotsTxt: true,
 };
