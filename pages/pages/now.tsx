@@ -28,8 +28,7 @@ export default function AboutPage() {
             MacBook、一部相機和一枝筆桿。正職是 UI/UX
             設計師，閒時愛看電影。大學時對城市研究最著迷，旅行時不忘寫下大街小巷的見聞。
           </Text>
-        </Box>
-        <HStack gap="4">
+          <HStack gap="4">
           <Link passHref href="https://twitter.com/desktopofsamuel">
             <Button leftIcon={<FaTwitter />}>我的 Twitter</Button>
           </Link>
@@ -37,10 +36,12 @@ export default function AboutPage() {
             <Button leftIcon={<FaInstagram />}>我的 Instagram</Button>
           </Link>
         </HStack>
+        </Box>
+        
         <Box>
           <Heading>現在 Now</Heading>
           <Text>
-            Now Page Movement 是一個外國網主發起的運動，在自己的網站開一新頁
+            <a href="https://sive.rs/nowff" target="_blank" rel="noreferrer">Now Page Movement</a> 是一個外國網主發起的運動，在自己的網站開一新頁
             &quot;Now&quot; ，寫下“What are you focused on now?”
             的答案。在社交媒體的世代，每個 Tweet、Status 和 Story
             也在表達自己的心情和想法。Now
@@ -49,12 +50,16 @@ export default function AboutPage() {
           </Text>
         </Box>
         <Box>
-          <Heading>Now</Heading>
+          <Text>來年希望繼續當個有心人，2022年希望完成的事：</Text>
+         <Text>⬜️ 投放時間到設計社群當中</Text><Text>⬜️ 分享我學習 Coding 心得</Text>
+          <Text>⬜️ 看20齣紀錄片</Text>
+          <Text>⬜️ 閱讀12本書</Text>
+          <Text>⬜️ 完成12期的 <a href="https://www.getrevue.co/profile/juxtdesigncc" target="_blank" rel="noreferrer">How Might We 設計 Newsletter</a></Text>
+        
           <Alert status="info">
             <AlertIcon />
             <Text>
-              最近喜愛的東西已搬到<Link href="/">主頁</Link>，如何將網誌連結到
-              Spotify, Letterboxd 等平台，可參考這篇
+              2021年我已把最近喜愛的東西已搬到<Link href="/">主頁</Link>，並轉成自動更新，想知如何連結Spotify, Letterboxd 等平台，可參考這篇
               <Link href="/posts/gatsby-個人狀況自動更新-整合spotify音樂-letterboxd電影-書本紀錄/">
                 技術分享
               </Link>
