@@ -1,6 +1,8 @@
 import Films from "@/components/Films";
 import Books from "@/components/Books";
 import Music from "@/components/Music";
+import Typing from "@/components/Typing";
+import Map from "@/components/Map"
 import { SimpleGrid } from "@chakra-ui/react";
 
 export default function Now() {
@@ -10,6 +12,8 @@ export default function Now() {
         <Music />
         <Books />
         <Films />
+        <Map />
+        <Typing/>
       </SimpleGrid>
     </>
   );

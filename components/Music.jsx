@@ -70,7 +70,9 @@ const Music = () => {
     <>
       <Box
         backgroundColor={useColorModeValue("gray.50", "gray.700")}
-        boxShadow="xs"
+        boxShadow="sm"
+        transition="all ease-in-out 200ms"
+        _hover={{ boxShadow: "md" }}
         p="4"
         borderRadius="16"
         gridColumn={{ base: "span 2", md: "initial" }}

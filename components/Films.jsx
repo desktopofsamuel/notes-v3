@@ -34,30 +34,35 @@ const Films = () => {
     <>
       <Box
         backgroundColor={useColorModeValue("gray.50", "gray.700")}
-        boxShadow="xs"
+        boxShadow="md"
         p="4"
         borderRadius="16"
         gridColumn="span 2"
         width="100%"
+        zIndex="0"
+        position="relative"
       >
-        <Text variant="small">🎬 最近看</Text>
-        <Grid gridTemplateColumns="repeat(5, 1fr)" transform="scale(0.9)">
+        <Text variant="small" textTransform="uppercase" letterSpacing="wide">🎬 Recently watching</Text>
+        <Grid display="flex" flexDirection="row" zIndex="-10" position="relative">
           {!data ? (
             <Box height={200} width="100%"></Box>
           ) : (
             data.map((item, i) => (
               <Box
                 key={i}
-                mr="-30px"
-                zIndex={i * -1}
+                width="100%"
                 borderRadius="4px"
-                overflow="hidden"
                 transition="all 100ms ease-in-out"
+                transform="scale(0.9)"
+                boxShadow="2px 0 7px rgba(0,0,0,0.2);"
                 _hover={{
                   zIndex: "100",
-                  transform: "rotate3d(1, 1, 1,2deg) scale3d(1.1, 1.1, 1.1)",
+                  transform: "rotate3d(1, 1, 1,2deg) scale(1)",
                 }}
-                boxShadow="2px 0 7px grey;"
+                zIndex={-i}
+                _notFirst={{
+                  ml: "-30px"
+                }}
               >
                 <NextLink href={item.link} target="_blank" variant="noeffect">
                   <Tooltip label={item.name} fontSize="md" mt="10px">
