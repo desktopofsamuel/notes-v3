@@ -36,9 +36,9 @@ export default function Header() {
       gap="10"
       gridTemplateColumns={{ base: "auto auto", md: "auto" }}
       mb={{ base: "8", md: "0" }}
-      position={{ base: "initial", md: "sticky" }}
+      // position={{ base: "initial", md: "sticky" }}
       top={{ base: "0", md: "4" }}
-      height={{ base: "initial", md: "100px" }}
+      // height={{ base: "initial", md: "100px" }}
     >
       <Flex direction="column">
         <NextLink href="/" passHref variant="noeffect">

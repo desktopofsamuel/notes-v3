@@ -9,6 +9,7 @@ import {
   useColorModeValue,
   Flex,
   Wrap,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import fetcher from "@/lib/fetcher";
@@ -41,6 +42,10 @@ const Books = () => {
 
   const { data } = useSWR("/api/books", fetcher);
 
+  Array.prototype.sample = function(){
+    return this[Math.floor(Math.random()*this.length)];
+  }
+
   // const { data, error } = useSWR(
   //   "https://damp-lowlands-80262.herokuapp.com/oku",
   //   fetcher
@@ -53,20 +58,24 @@ const Books = () => {
     <>
       <Box
         backgroundColor={useColorModeValue("gray.50", "gray.700")}
-        boxShadow="xs"
         p="4"
+        boxShadow="sm"
+        transition="all ease-in-out 200ms"
+        _hover={{ boxShadow: "md" }}
         borderRadius="16"
         gridColumn={{ base: "span 2", md: "initial" }}
       >
-        <Text variant="small">📚 最近讀</Text>
-
+        <Text variant="small">Recently reading</Text>
+    
         {!data ? (
           <p>Loading </p>
         ) : (
           data.map((item, i) => (
-            <Box key={i} mb="4">
+            <Grid key={i} px="4" py="2" mb="2" borderRadius="2xl" backgroundColor={useColorModeValue("gray.200", "gray.600")} gridTemplateColumns="max-content auto" gap="2">
+             <Text variant="small">{["📚", "📖", "📕", "📒", "📔", "📙","📘"].sample()}</Text>
+              <Box>
               <NextLink
-                fontSize="lg"
+                fontSize="md"
                 fontWeight="bold"
                 lineHeight="0"
                 href={item.link}
@@ -80,9 +89,11 @@ const Books = () => {
               <Text m="0" fontSize="xs" textTransform="uppercase">
                 by {item.author}
               </Text>
-            </Box>
+              </Box>
+            </Grid>
           ))
         )}
+
       </Box>
     </>
   );
