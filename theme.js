@@ -230,6 +230,7 @@ const customTheme = extendTheme({
     global: (props) => ({
       body: {
         lineHeight: "taller",
+        backgroundColor: mode("white.200","gray.900")(props),
       },
       p: {
         color: mode("gray.600", "indigo.300")(props),
