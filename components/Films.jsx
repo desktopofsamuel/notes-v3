@@ -42,7 +42,7 @@ const Films = () => {
         zIndex="0"
         position="relative"
       >
-        <Text variant="small" textTransform="uppercase" letterSpacing="wide">🎬 Recently watching</Text>
+        <Text variant="small" textTransform="uppercase" letterSpacing="wide">🎬 最近看</Text>
         <Grid display="flex" flexDirection="row" zIndex="-10" position="relative">
           {!data ? (
             <Box height={200} width="100%"></Box>
@@ -52,12 +52,14 @@ const Films = () => {
                 key={i}
                 width="100%"
                 borderRadius="4px"
+                overflow="hidden"
                 transition="all 100ms ease-in-out"
                 transform="scale(0.9)"
                 boxShadow="2px 0 7px rgba(0,0,0,0.2);"
                 _hover={{
                   zIndex: "100",
                   transform: "rotate3d(1, 1, 1,2deg) scale(1)",
+                  boxShadow:"6px 0 7px rgba(0,0,0,0.5);"
                 }}
                 zIndex={-i}
                 _notFirst={{

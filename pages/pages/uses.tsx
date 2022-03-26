@@ -42,7 +42,7 @@ export default function UsesPage() {
         (data.map((item: any, i: Number) => (
           <Grid key={i} p="2" border="1px solid" borderColor="gray.200" gridTemplateColumns="max-content auto" gridGap="8">
             {item.fields["Image"] && 
-            <Box backgroundColor="indigo.200" borderRadius="36px" display="inline-block" p="4" height="128px" width="128px" position="relative" >
+            <Box backgroundColor="indigo.200" borderRadius="36px" display="grid" placeContent="center" p="4" height="128px" width="128px" position="relative" >
               <Image src={item.fields["Image"][0].thumbnails.large.url} alt={item.fields["Name"]} height="64px" width="64px"/>
             </Box>
             }

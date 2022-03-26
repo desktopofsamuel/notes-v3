@@ -65,14 +65,15 @@ const Books = () => {
         borderRadius="16"
         gridColumn={{ base: "span 2", md: "initial" }}
       >
-        <Text variant="small">Recently reading</Text>
+        <Text variant="small">📚 最近讀</Text>
     
         {!data ? (
           <p>Loading </p>
         ) : (
           data.map((item, i) => (
-            <Grid key={i} px="4" py="2" mb="2" borderRadius="2xl" backgroundColor={useColorModeValue("gray.200", "gray.600")} gridTemplateColumns="max-content auto" gap="2">
-             <Text variant="small">{["📚", "📖", "📕", "📒", "📔", "📙","📘"].sample()}</Text>
+            <Grid key={i} mb="2" borderRadius="2xl" 
+            gridTemplateColumns="max-content auto" gap="2">
+             {/* <Text variant="small">{["📚", "📖", "📕", "📒", "📔", "📙","📘"].sample()}</Text> */}
               <Box>
               <NextLink
                 fontSize="md"
