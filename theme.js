@@ -48,8 +48,8 @@ const customTheme = extendTheme({
   },
   semanticTokens: {
     colors: {
-      background : {
-        default: 'white.200',
+      background: {
+        default: 'white',
         _dark: 'indigo.900',
       }
     }

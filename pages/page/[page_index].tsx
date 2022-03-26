@@ -38,12 +38,23 @@ const HomePage = ({
             <Heading fontSize="md">近期 Now</Heading>
             <IconButton
             width="4"
+            aria-label="Hide All Now"
+            variant="solid"
+            colorScheme="gray"
+            isRound
+            onClick={onToggle}
+            icon={ isOpen ? <FaChevronDown/> : <FaChevronUp/>}
+            display={{ base: "inherit", md: "none" }}
+            />
+            <IconButton
+            width="4"
             aria-label="Hide Now"
             variant="solid"
             colorScheme="gray"
             isRound
             onClick={onToggle}
             icon={ isOpen ? <FaChevronDown/> : <FaChevronUp/>}
+            display={{ base: "none", md: "inherit" }}
             />
         </Flex>
         <Now goOpen={isOpen} goClose={onClose} getDisclosureProps/>

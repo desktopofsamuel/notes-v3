@@ -22,7 +22,7 @@ module.exports = {
       path: "/category/桌面/",
     },
     {
-      label: "My Setup",
+      label: "我的Setup",
       path: "/pages/uses/",
     },
     {
