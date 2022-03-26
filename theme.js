@@ -46,6 +46,14 @@ const customTheme = extendTheme({
       900: "#1A2025",
     },
   },
+  semanticTokens: {
+    colors: {
+      background : {
+        default: 'white.200',
+        _dark: 'indigo.900',
+      }
+    }
+  },
   fontSizes: {
     xs: "0.75rem",
     sm: "0.875rem",
