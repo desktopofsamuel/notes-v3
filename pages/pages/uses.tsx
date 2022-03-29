@@ -24,8 +24,8 @@ import Image from 'next/image';
 
 
 export default function UsesPage() {
-  const {data:  appsData } = useSWR<any>("/api/apps", fetcher);
-  const { data: gadgetsData } = useSWR<any>("/api/gadgets", fetcher);
+  const {data:  appsData } = useSWR("/api/apps", fetcher);
+  const { data: gadgetsData } = useSWR("/api/gadgets", fetcher);
 
   return (
     <Layout>
@@ -50,6 +50,7 @@ export default function UsesPage() {
       }
     </TabPanel>
     <TabPanel>
+      {console.log(gadgetsData)}
       {!appsData ? (<Text>Loading...</Text>):
         (appsData.map((item: any, i: number) => (
           <Grid key={i} p="2" border="1px solid" borderColor="gray.200" gridTemplateColumns="max-content auto" gridGap="8">
