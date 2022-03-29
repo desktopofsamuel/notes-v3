@@ -28,7 +28,7 @@ const Entry = ({
       <Box>
         <Grid
           gap={{ base: "2", md: "8" }}
-          align="stretch"
+          alignItems="stretch"
           gridTemplateColumns={{ base: "1fr", md: "max-content 1fr" }}
         >
           <Text

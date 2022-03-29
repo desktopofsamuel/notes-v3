@@ -13,7 +13,9 @@ import Now from "@/components/Now";
 import CONFIG from "../../config";
 import {
   FaChevronDown,
-  FaChevronUp
+  FaChevronUp,
+  FaSun,
+  FaMoon,
 } from "react-icons/fa";
 import { useState } from "react"
 
@@ -44,20 +46,9 @@ const HomePage = ({
             isRound
             onClick={onToggle}
             icon={ isOpen ? <FaChevronDown/> : <FaChevronUp/>}
-            display={{ base: "inherit", md: "none" }}
-            />
-            <IconButton
-            width="4"
-            aria-label="Hide Now"
-            variant="solid"
-            colorScheme="gray"
-            isRound
-            onClick={onToggle}
-            icon={ isOpen ? <FaChevronDown/> : <FaChevronUp/>}
-            display={{ base: "none", md: "inherit" }}
             />
         </Flex>
-        <Now goOpen={isOpen} goClose={onClose} getDisclosureProps/>
+        <Now isOpen={!isOpen} getDisclosureProps forwardRef/>
         </>
       )}
       <VStack spacing="8">

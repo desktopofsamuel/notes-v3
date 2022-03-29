@@ -21,17 +21,10 @@ export default function NextLink({
         href={href}
         passHref={passHref}
         prefetch={prefetch}
-        variant={variant}
+        // variant={variant}
         {...rest}
-      >
-        <ChakraLink
-          href={href}
-          className={className}
-          variant={variant}
-          {...rest}
-        >
+      >    
           {children}
-        </ChakraLink>
       </CustomLink>
     );
   return (

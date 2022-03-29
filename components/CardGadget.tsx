@@ -13,7 +13,7 @@ import {
 
 
 export default function CardGadget() {
-  const { data, error } = useSWR("/api/gadgets", fetcher);
+  const { data, error } = useSWR<any>("/api/gadgets", fetcher);
   return (
     <>
       <Box
@@ -27,11 +27,11 @@ export default function CardGadget() {
         {!data ? (
             <Box height={200} width="100%"></Box>
           ) : (
-            data.slice(0, 4).map((item: any, i: Number) => (
+            data.slice(0, 4).map((item: any, i: number) => (
               <Box key={i}>
                 {console.log(item)}
                 <Text my="0" lineHeight="short">{item.fields["Name"]}</Text>
-                <Text fontSize="sm" noOfLines="2">{item.fields["DescriptionTC"]}</Text>
+                <Text fontSize="sm" noOfLines={2}>{item.fields["DescriptionTC"]}</Text>
               </Box>
             ))
           )

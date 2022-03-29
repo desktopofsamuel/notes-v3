@@ -1,7 +1,6 @@
 import React from 'react'
 import fetcher from '../lib/fetcher';
 import useSWR from "swr";
-
 import {
   Text,
   Grid,
@@ -11,10 +10,9 @@ import {
   Flex,
   Wrap,
 } from "@chakra-ui/react";
-import { isNotEmptyObject } from '@chakra-ui/utils';
 
 export default function CardApp() {
-  const { data, error } = useSWR("/api/apps", fetcher);
+  const { data, error } = useSWR<any>("/api/apps", fetcher);
   return (
     <>
       <Box
@@ -28,11 +26,11 @@ export default function CardApp() {
         {!data ? (
             <Box height={200} width="100%"></Box>
           ) : (
-            data.slice(0, 4).map((item: any, i: Number) => (
+            data.map((item: any, i: number) => (
               <Box key={i}>
                 {console.log(item)}
                 <Text my="0" lineHeight="short">{item.fields["Name"]}</Text>
-                <Text fontSize="sm" noOfLines="2">{item.fields["DescriptionTC"]}</Text>
+                <Text fontSize="sm" noOfLines={2}>{item.fields["DescriptionTC"]}</Text>
               </Box>
             ))
           )
