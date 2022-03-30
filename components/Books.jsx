@@ -71,8 +71,9 @@ const Books = () => {
           <p>Loading </p>
         ) : (
           data.map((item, i) => (
-            <Grid key={i} px="4" py="2" mb="2" borderRadius="2xl" backgroundColor={useColorModeValue("gray.200", "gray.600")} gridTemplateColumns="max-content auto" gap="2">
-             <Text variant="small">{["📚", "📖", "📕", "📒", "📔", "📙","📘"].sample()}</Text>
+            <Grid key={i} mb="2" borderRadius="2xl" 
+            gridTemplateColumns="max-content auto" gap="2">
+             {/* <Text variant="small">{["📚", "📖", "📕", "📒", "📔", "📙","📘"].sample()}</Text> */}
               <Box>
               <NextLink
                 fontSize="md"

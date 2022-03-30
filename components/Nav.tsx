@@ -14,6 +14,7 @@ import {
   IconButton,
   UnorderedList,
   ListItem,
+  LinkBox,
 } from "@chakra-ui/react";
 import {
   FaTwitter,
@@ -72,6 +73,7 @@ export default function Header() {
           marginInlineStart="0"
           mb="8"
           textAlign={{ base: "right", md: "inherit" }}
+          marginTop="0"
         >
           {MENU.map((item) => (
             <ListItem key={item.path} listStyleType="none">

@@ -71,7 +71,7 @@ export default function FooterNav() {
             </defs>
           </svg>
         </Box>
-        <Container direction="column">
+        <Container flexDirection="column">
           <VStack justifyContent="flex-start" maxWidth="100%" textAlign="left">
             <Center maxWidth="300px" p="4">
               <svg

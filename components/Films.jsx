@@ -34,7 +34,6 @@ const Films = () => {
     <>
       <Box
         backgroundColor={useColorModeValue("gray.50", "gray.700")}
-        boxShadow="md"
         p="4"
         borderRadius="16"
         gridColumn="span 2"
@@ -58,6 +57,7 @@ const Films = () => {
                 _hover={{
                   zIndex: "100",
                   transform: "rotate3d(1, 1, 1,2deg) scale(1)",
+                  boxShadow:"6px 0 7px rgba(0,0,0,0.5);"
                 }}
                 zIndex={-i}
                 _notFirst={{
