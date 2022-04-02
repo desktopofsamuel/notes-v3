@@ -14,7 +14,7 @@ import { maptiler } from 'pigeon-maps/providers'
 
 // const maptilerProvider = maptiler(process.env.MAPTILER_API, 'streets')
 
-const MAP_URL = `https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/114.1168,22.3498,11,0/600x600?before_layer=aerialway&access_token=${process.env.MAPBOX_API}`
+const MAP_URL = `https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/114.1168,22.3498,11,0/800x800?before_layer=aerialway&access_token=${process.env.MAPBOX_API}`
 
 
 export default function Map() {

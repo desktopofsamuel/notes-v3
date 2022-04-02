@@ -6,6 +6,7 @@ import {
   Flex,
   Grid,
   Heading,
+  HStack,
   VStack,
   Image as ChakraImage,
   SimpleGrid,
@@ -35,7 +36,8 @@ export default function Header() {
       as="aside"
       alignContent="flex-start"
       gap="10"
-      gridTemplateColumns={{ base: "auto auto", md: "auto" }}
+      gridTemplateColumns="auto auto"
+      my="8"
       mb={{ base: "8", md: "0" }}
       // position={{ base: "initial", md: "sticky" }}
       top={{ base: "0", md: "4" }}
@@ -54,8 +56,8 @@ export default function Header() {
         </NextLink>
 
         <NextLink href="/" passHref variant="noeffect">
-          <Heading fontSize="medium" mt="4">
-            Samuel W.
+          <Heading fontSize="medium" fontWeight="bold" mt="4">
+            Samuel Wong
           </Heading>
         </NextLink>
         <Box
@@ -83,13 +85,10 @@ export default function Header() {
             </ListItem>
           ))}
         </UnorderedList>
-
-        {/* Social Icons */}
-        <SimpleGrid
-          spacingX="4"
-          spacingY="2"
-          columns={3}
-          display={{ base: "none", md: "grid" }}
+      </VStack>
+       {/* Social Icons */}
+       <HStack
+          spacing="4"
         >
           <SocialIcon
             href="https://twitter.com/desktopofsamuel"
@@ -121,7 +120,7 @@ export default function Header() {
           >
             <FaEnvelope />
           </SocialIcon>
-        </SimpleGrid>
+        </HStack>
         <IconButton
           width="4"
           aria-label="Switch Color Mode"
@@ -132,7 +131,6 @@ export default function Header() {
           icon={colorMode === `light` ? <FaMoon /> : <FaSun />}
           display={{ base: "none", md: "inherit" }}
         />
-      </VStack>
     </Grid>
   );
 }

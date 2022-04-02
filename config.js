@@ -29,6 +29,10 @@ module.exports = {
       label: "旅遊",
       path: "/category/地圖",
     },
+    {
+      label: "Resources",
+      path: "/pages/resources/",
+    },
   ],
   FOOTER_NAV: [
     {
@@ -43,6 +47,10 @@ module.exports = {
       label: "更新日誌",
       path: "/pages/changelog/",
     },
+    {
+      label: "Resources",
+      path: "/pages/resources/",
+    },
   ],
   POSTS_PER_PAGE: 6,
   AUTHOR_NAME: "Samuel W.",
@@ -50,5 +58,5 @@ module.exports = {
   COPYRIGHT: "© 版權所有",
   OG_IMAGE: "/opengraph.png",
   LOCALE: "zh-hk",
-  BIO: "科技 | 設計 | 城市  <br/> <br/>   UI/UX 設計師，喜愛攝影，漫遊城市的不同角落。",
+  BIO: "Full-stack UI/UX designer crafting websites & mobile applications with bespoke experience.",
 };

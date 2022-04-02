@@ -51,6 +51,10 @@ const customTheme = extendTheme({
       background: {
         default: 'white',
         _dark: 'indigo.900',
+      },
+      border: {
+        default: 'indigo.200',
+        _dark: 'whiteAlpha.400',
       }
     }
   },
