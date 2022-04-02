@@ -36,11 +36,10 @@ export default function Post({ post }: { post: PostType }) {
       <Text noOfLines={3} my="2">
         {post.excerpt}
       </Text>
-      <Button rightIcon={<ArrowForwardIcon />} variant="ghost" ml="-18px">
-        <NextLink variant="noeffect" href={`/posts/${post.slug}`}>
+      <NextLink variant="noeffect" href={`/posts/${post.slug}`}>
+      <Button rightIcon={<ArrowForwardIcon />} variant="ghost" ml="-18px" as="a">
           閱讀更多
-        </NextLink>
-      </Button>
+      </Button> </NextLink>
     </Box>
   );
 }

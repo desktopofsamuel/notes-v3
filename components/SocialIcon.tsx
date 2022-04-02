@@ -10,6 +10,7 @@ type SocialIconType = {
 const SocialIcon: React.FC<SocialIconType> = ({ children, href, label }) => (
   <Link href={href} passHref>
     <IconButton
+      as="a"
       width="4"
       variant="outline"
       isRound
