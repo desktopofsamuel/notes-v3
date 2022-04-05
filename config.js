@@ -22,10 +22,6 @@ module.exports = {
       path: "/category/桌面/",
     },
     {
-      label: "我的Setup",
-      path: "/pages/uses/",
-    },
-    {
       label: "旅遊",
       path: "/category/地圖",
     },
@@ -37,7 +33,7 @@ module.exports = {
     },
     {
       label: "我的 Setup",
-      path: "/pages/setup/",
+      path: "/pages/uses/",
     },
     {
       label: "更新日誌",

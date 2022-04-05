@@ -49,10 +49,14 @@ const customTheme = extendTheme({
   semanticTokens: {
     colors: {
       background: {
-        default: 'white',
-        _dark: 'indigo.900',
-      }
-    }
+        default: "white",
+        _dark: "indigo.900",
+      },
+      border: {
+        default: "indigo.300",
+        _dark: "indigo.800",
+      },
+    },
   },
   fontSizes: {
     xs: "0.75rem",
