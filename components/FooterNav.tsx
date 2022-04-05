@@ -71,7 +71,7 @@ export default function FooterNav() {
             </defs>
           </svg>
         </Box>
-        <Container direction="column">
+        <Container flexDirection="column">
           <VStack justifyContent="flex-start" maxWidth="100%" textAlign="left">
             <Center maxWidth="300px" p="4">
               <svg
@@ -192,14 +192,14 @@ export default function FooterNav() {
               在社交媒體消失前，讓我們繼續保持聯絡，以電郵接收最新通訊！
             </Text>
             {/* <Newsletter /> */}
-            <Button>
-              <NextLink
-                variant="noeffect"
-                href="https://follow.it/desktop-of-samuel?action=followPub"
-              >
+            <NextLink
+              variant="noeffect"
+              href="https://follow.it/desktop-of-samuel?action=followPub"
+            >
+              <Button as="a" size="lg" _hover={{ border: "none" }}>
                 Follow Me
-              </NextLink>
-            </Button>
+              </Button>
+            </NextLink>
             {/* <Text colorScheme="gray" opacity="0.5" fontSize="sm">
               ✌️ 不用擔心，我不會亂發太多電郵！
             </Text> */}

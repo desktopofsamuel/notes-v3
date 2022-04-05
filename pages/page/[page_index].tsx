@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Layout from "@/components/Layout";
-import { Heading, VStack } from "@chakra-ui/react";
+import { Collapse, forwardRef, Flex, Heading, VStack, IconButton, useDisclosure } from "@chakra-ui/react";
 import fs from "fs";
 import path from "path";
 import Post from "@/components/Post";
@@ -11,6 +11,14 @@ import { getPosts } from "@/lib/posts";
 import { PostType } from "@/types/post";
 import Now from "@/components/Now";
 import CONFIG from "../../config";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaSun,
+  FaMoon,
+} from "react-icons/fa";
+import { useState } from "react"
+
 const HomePage = ({
   posts,
   numPages,
@@ -20,14 +28,27 @@ const HomePage = ({
   numPages: number;
   currentPage: number;
 }) => {
+  const { isOpen, onToggle, onClose, getDisclosureProps } = useDisclosure()
+  const [hidden, setHidden] = useState(!isOpen);
   return (
     <Layout
       title={currentPage == 1 ? "" : `所有文章 —— 第` + currentPage + `頁`}
     >
       {currentPage == 1 && (
         <>
-          <Heading fontSize="md">近期 Now</Heading>
-          <Now />
+          <Flex justifyContent="space-between" alignItems="baseline" width="100%">
+            <Heading fontSize="md">近期 Now</Heading>
+            <IconButton
+            width="4"
+            aria-label="Hide All Now"
+            variant="solid"
+            colorScheme="gray"
+            isRound
+            onClick={onToggle}
+            icon={ isOpen ? <FaChevronDown/> : <FaChevronUp/>}
+            />
+        </Flex>
+        <Now isOpen={!isOpen} getDisclosureProps forwardRef/>
         </>
       )}
       <VStack spacing="8">

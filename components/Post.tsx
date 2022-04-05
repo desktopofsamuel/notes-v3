@@ -2,14 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import dayjs from "dayjs";
 import { PostType } from "@/types/post";
-import { Button, HStack, Text, Box, Heading } from "@chakra-ui/react";
+import { Button, HStack, Text, LinkBox, LinkOverlay, Heading } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import NextLink from "@/components/NextLink";
 
 export default function Post({ post }: { post: PostType }) {
   // console.log(post);
   return (
-    <Box as="article" mb="6" display="grid" justifyItems="baseline">
+    <LinkBox as='article' mb="6" display="grid" justifyItems="baseline">
       <HStack as="span" spacing="2">
         <Text
           as="time"
@@ -29,9 +29,11 @@ export default function Post({ post }: { post: PostType }) {
         </Text>
       </HStack>
       <NextLink href={`/posts/${post.slug}`} variant="postTitle" passHref>
-        <Heading variant="title" mt="0">
-          {post.frontmatter.title}
-        </Heading>
+        <LinkOverlay>
+          <Heading variant="title" mt="0">
+            {post.frontmatter.title}
+          </Heading>
+        </LinkOverlay>
       </NextLink>
       <Text noOfLines={3} my="2">
         {post.excerpt}
@@ -41,6 +43,6 @@ export default function Post({ post }: { post: PostType }) {
           閱讀更多
         </NextLink>
       </Button>
-    </Box>
+    </LinkBox>
   );
 }
