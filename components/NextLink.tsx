@@ -17,15 +17,16 @@ export default function NextLink({
   const internal = /^\/(?!\/)/.test(href);
   if (internal)
     return (
-      <CustomLink
-        href={href}
-        passHref={passHref}
-        prefetch={prefetch}
-        // variant={variant}
-        {...rest}
-      >    
+      <Link href={href} passHref>
+        <ChakraLink
+          href={href}
+          className={className}
+          variant={variant}
+          {...rest}
+        >
           {children}
-      </CustomLink>
+        </ChakraLink>
+      </Link>
     );
   return (
     <ChakraLink
