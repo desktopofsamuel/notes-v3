@@ -24,7 +24,6 @@ export default function Layout({
         // ]}
       />
       <Container maxW="container.lg">
-       
         <Grid
           gridTemplateColumns={{
             base: "100%",
@@ -34,8 +33,9 @@ export default function Layout({
           py="10"
           gap={{ base: "0", md: "2", lg: "10" }}
         >
-         <Nav />
+          <Nav />
           <Box
+            as="span"
             background="linear-gradient(180deg,#e1e1e1 0,#e1e1e1 48%,#fff)"
             height="33vh"
             width="1px"

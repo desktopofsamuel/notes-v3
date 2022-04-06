@@ -22,7 +22,7 @@ import Newsletter from "@/components/Newsletter";
 
 export default function FooterNav() {
   return (
-    <div>
+    <Box as="footer">
       <Box
         py={{ base: "6", md: "12" }}
         alignItems="center"
@@ -196,9 +196,7 @@ export default function FooterNav() {
               variant="noeffect"
               href="https://follow.it/desktop-of-samuel?action=followPub"
             >
-              <Button as="a" size="lg" _hover={{ border: "none" }}>
-                Follow Me
-              </Button>
+              <Button size="lg">Follow Me</Button>
             </NextLink>
             {/* <Text colorScheme="gray" opacity="0.5" fontSize="sm">
               ✌️ 不用擔心，我不會亂發太多電郵！
@@ -253,6 +251,6 @@ export default function FooterNav() {
           </ListItem>
         ))}
       </UnorderedList>
-    </div>
+    </Box>
   );
 }
