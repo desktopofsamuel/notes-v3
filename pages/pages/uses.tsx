@@ -90,7 +90,7 @@ export default function UsesPage() {
                 {appsData.map((item: any, i: number) => (
                   <Grid
                     key={i}
-                    p="2"
+                    p="4"
                     border="1px solid"
                     borderColor="gray.200"
                     gridTemplateColumns="max-content auto"
@@ -100,13 +100,14 @@ export default function UsesPage() {
                     {item.fields["Image"] && (
                       <Box
                         backgroundColor="indigo.200"
-                        borderRadius="36px"
+                        borderRadius="lg"
                         display="grid"
                         placeContent="center"
                         p="4"
-                        height="128px"
-                        width="128px"
+                        height="80px"
+                        width="80px"
                         position="relative"
+                        shadow="md"
                       >
                         <Image
                           src={item.fields["Image"][0].thumbnails.large.url}
@@ -117,22 +118,23 @@ export default function UsesPage() {
                       </Box>
                     )}
                     <Box>
-                      <Heading fontSize="xl" my="0" lineHeight="short">
-                        {item.fields["Name"]}
-                      </Heading>
-                      {/* <Text fontSize="sm">{item.fields["DescriptionTC"]}</Text> */}
-                      <Box
+                      <VStack spacing="4" alignItems="start">
+                        <Heading fontSize="xl" my="0" lineHeight="short">
+                          {item.fields["Name"]}
+                        </Heading>
+                        {/* <Box
                         dangerouslySetInnerHTML={{
                           __html: marked(item.fields["DescriptionTC"]),
                         }}
-                      />
-                      {item.fields["ExtraLink"] && (
-                        <Button>
-                          <NextLink href={item.fields["ExtraLink"]}>
-                            {item.fields["CTA"]}
-                          </NextLink>
-                        </Button>
-                      )}
+                      /> */}
+                        {item.fields["ExtraLink"] && (
+                          <Button>
+                            <NextLink href={item.fields["ExtraLink"]}>
+                              {item.fields["CTATC"]}
+                            </NextLink>
+                          </Button>
+                        )}
+                      </VStack>
                     </Box>
                   </Grid>
                 ))}

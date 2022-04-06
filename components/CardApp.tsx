@@ -39,9 +39,9 @@ export default function CardApp() {
               <Text my="0" lineHeight="short">
                 {item.fields["Name"]}
               </Text>
-              <Text fontSize="sm" noOfLines={2}>
+              {/* <Text fontSize="sm" noOfLines={2}>
                 {item.fields["DescriptionTC"]}
-              </Text>
+              </Text> */}
             </Box>
           ))
         )}
