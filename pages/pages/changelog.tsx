@@ -8,6 +8,12 @@ const Changelog = () => {
       <Heading as="h2">更新日誌 Changelog</Heading>
       <UnorderedList>
         <Entry
+          title="近期和我的Setup"
+          description="為主頁的近期加以開關鍵，方便在電話瀏覽的時候收起。同一時間接到 Airtable 的 Setup 頁。"
+          date="2022-04-06"
+          commit="15517d5b1c4dd6598ebd53818ea3260e02197b57"
+        />
+        <Entry
           title="v3.0"
           description="繼續活學活用的旅程，Notes 已來到v3的更新，改用了 NextJS，還是在用 Chakra UI。自訂 API 和 SWR 讓 Now 一頁自動更新，不用再等網誌更新才再 Build。訂閱表格轉回新的 RSS Newsletter。"
           date="2022-01-31"
