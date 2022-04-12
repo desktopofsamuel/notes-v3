@@ -43,7 +43,19 @@ const customTheme = extendTheme({
       600: "#546D94",
       700: "#3A507C",
       800: "#253764",
-      900: "#162553",
+      900: "#1A2025",
+    },
+  },
+  semanticTokens: {
+    colors: {
+      background: {
+        default: "white",
+        _dark: "indigo.900",
+      },
+      border: {
+        default: "indigo.300",
+        _dark: "indigo.800",
+      },
     },
   },
   fontSizes: {
@@ -230,6 +242,7 @@ const customTheme = extendTheme({
     global: (props) => ({
       body: {
         lineHeight: "taller",
+        background: mode("white.200", "indigo.900")(props),
       },
       p: {
         color: mode("gray.600", "indigo.300")(props),
