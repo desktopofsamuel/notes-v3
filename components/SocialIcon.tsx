@@ -1,4 +1,4 @@
-import Link from "next/link";
+import NextLink from "@/components/NextLink";
 import { IconButton } from "@chakra-ui/react";
 
 type SocialIconType = {
@@ -8,9 +8,8 @@ type SocialIconType = {
 };
 
 const SocialIcon: React.FC<SocialIconType> = ({ children, href, label }) => (
-  <Link href={href} passHref>
+  <NextLink variant="noeffect" href={href} target="_blank">
     <IconButton
-      as="a"
       width="4"
       variant="outline"
       isRound
@@ -20,7 +19,7 @@ const SocialIcon: React.FC<SocialIconType> = ({ children, href, label }) => (
       icon={children}
       aria-label={label}
     />
-  </Link>
+  </NextLink>
 );
 
 export default SocialIcon;

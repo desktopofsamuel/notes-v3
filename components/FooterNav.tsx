@@ -195,8 +195,9 @@ export default function FooterNav() {
             <NextLink
               variant="noeffect"
               href="https://follow.it/desktop-of-samuel?action=followPub"
+              target="_blank"
             >
-              <Button as="a" size="lg" _hover={{ border: "none" }}>
+              <Button size="lg" _hover={{ border: "none" }}>
                 Follow Me
               </Button>
             </NextLink>

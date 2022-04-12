@@ -16,7 +16,7 @@ import NextLink from "@/components/NextLink";
 export default function Post({ post }: { post: PostType }) {
   // console.log(post);
   return (
-    <LinkBox as="article" mb="6" display="grid" justifyItems="baseline">
+    <LinkBox as="article" mb="6" justifyItems="baseline">
       <HStack as="span" spacing="2">
         <Text
           as="time"
@@ -46,12 +46,7 @@ export default function Post({ post }: { post: PostType }) {
         {post.excerpt}
       </Text>
       <NextLink variant="noeffect" href={`/posts/${post.slug}`}>
-        <Button
-          rightIcon={<ArrowForwardIcon />}
-          variant="ghost"
-          ml="-18px"
-          as="a"
-        >
+        <Button rightIcon={<ArrowForwardIcon />} variant="ghost" ml="-18px">
           閱讀更多
         </Button>
       </NextLink>
