@@ -63,6 +63,14 @@ const Music = () => {
   //   rssData();
   // }, []);
 
+  function Loader() {
+    return (
+      <Center textAlign="center" flexDirection="column">
+        <Skeleton width="80px" height="80px" circle />
+        <Skeleton/>
+      </Center>
+    );
+  }
   const { data } = useSWR("/api/top-artists", fetcher);
   // if (error) return "An error has occurred.";
   // if (!data) return "Loading...";
@@ -89,10 +97,9 @@ const Music = () => {
         >
           {/* {console.log(data)} */}
           {!data ? (
-           <Center textAlign="center" flexDirection="column">
-           <Skeleton circle/>
-           <Skeleton width="50%"/>
-           </Center>
+            <>
+              <Loader /> <Loader /> <Loader /> <Loader />
+            </>
           ) : (
             data.map((artist, i) => (
               <Center textAlign="center" flexDirection="column" key={i}>
