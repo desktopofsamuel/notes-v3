@@ -7,6 +7,12 @@ const Changelog = () => {
     <Layout title="更新日誌 Changelog">
       <Heading as="h2">更新日誌 Changelog</Heading>
       <UnorderedList>
+      <Entry
+          title="Skeleton loading"
+          description="為 Now 載入的資料加入 Skeleton Loading"
+          date="2022-07-02"
+          commit="15517d5b1c4dd6598ebd53818ea3260e02197b57"
+        />
         <Entry
           title="v3.0"
           description="繼續活學活用的旅程，Notes 已來到v3的更新，改用了 NextJS，還是在用 Chakra UI。自訂 API 和 SWR 讓 Now 一頁自動更新，不用再等網誌更新才再 Build。訂閱表格轉回新的 RSS Newsletter。"
