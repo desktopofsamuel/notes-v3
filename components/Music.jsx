@@ -15,8 +15,9 @@ import {
   keyframes,
 } from "@chakra-ui/react";
 import Image from "next/image";
-
 import fetcher from "@/lib/fetcher";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 // import Image from "next/image";
 
 const bounce = keyframes`
@@ -86,9 +87,12 @@ const Music = () => {
           alignItems="center"
           justifyContent="center"
         >
-          {console.log(data)}
+          {/* {console.log(data)} */}
           {!data ? (
-            <p>Loading </p>
+           <Center textAlign="center" flexDirection="column">
+           <Skeleton circle/>
+           <Skeleton width="50%"/>
+           </Center>
           ) : (
             data.map((artist, i) => (
               <Center textAlign="center" flexDirection="column" key={i}>

@@ -4,6 +4,7 @@ import NextLink from "./NextLink";
 import {
   Text,
   Grid,
+  Heading,
   Tooltip,
   Box,
   useColorModeValue,
@@ -13,6 +14,8 @@ import {
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import fetcher from "@/lib/fetcher";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Books = () => {
   // const [feed, setFeed] = useState({ title: "", items: [] });
@@ -40,11 +43,11 @@ const Books = () => {
   //   return result;
   // }
 
-  const { data } = useSWR("/api/books", fetcher);
+  const { data, error } = useSWR("/api/books", fetcher);
 
-  Array.prototype.sample = function(){
-    return this[Math.floor(Math.random()*this.length)];
-  }
+  // Array.prototype.sample = function () {
+  //   return this[Math.floor(Math.random() * this.length)];
+  // };
 
   // const { data, error } = useSWR(
   //   "https://damp-lowlands-80262.herokuapp.com/oku",
@@ -66,35 +69,50 @@ const Books = () => {
         gridColumn={{ base: "span 2", md: "initial" }}
       >
         <Text variant="small">📚 最近讀</Text>
-    
         {!data ? (
-          <p>Loading </p>
+          <>
+            <Skeleton width="50%" /> <Skeleton />
+            <Skeleton width="50%" /> <Skeleton />
+            <Skeleton width="50%" /> <Skeleton />
+            <Skeleton width="50%" /> <Skeleton />
+          </>
         ) : (
           data.map((item, i) => (
-            <Grid key={i} mb="2" borderRadius="2xl" 
-            gridTemplateColumns="max-content auto" gap="2">
-             {/* <Text variant="small">{["📚", "📖", "📕", "📒", "📔", "📙","📘"].sample()}</Text> */}
+            <Grid
+              key={i}
+              mb="2"
+              borderRadius="2xl"
+              gridTemplateColumns="max-content auto"
+              gap="2"
+            >
+              {/* <Text variant="small">{["📚", "📖", "📕", "📒", "📔", "📙","📘"].sample()}</Text> */}
               <Box>
-              <NextLink
-                fontSize="md"
-                fontWeight="bold"
-                lineHeight="0"
-                href={item.link}
-                title={`Read more about ${item.name} on Oku`}
-                target="_blank"
-                isExternal
-              >
-                {item.name} <ExternalLinkIcon mx="2px" />
-              </NextLink>
-
-              <Text m="0" fontSize="xs" textTransform="uppercase">
-                by {item.author}
-              </Text>
+                <NextLink
+                  href={item.link}
+                  title={`Read more about ${item.name} on Oku`}
+                  display="flex"
+                  alignItems="center"
+                  variant="noeffect"
+                  target="_blank"
+                  isExternal
+                >
+                  <Heading
+                    my="0"
+                    fontSize="md"
+                    fontWeight="bold"
+                    lineHeight="8"
+                  >
+                    {item.name || <Skeleton />}
+                  </Heading>
+                  <ExternalLinkIcon mx="2" />
+                </NextLink>
+                <Text m="0" fontSize="xs" textTransform="uppercase">
+                  {`by ${item.author}` || <Skeleton />}
+                </Text>
               </Box>
             </Grid>
           ))
         )}
-
       </Box>
     </>
   );
