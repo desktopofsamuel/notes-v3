@@ -56,6 +56,10 @@ const customTheme = extendTheme({
         default: "indigo.300",
         _dark: "indigo.800",
       },
+      outline: {
+        default: "gray.200",
+        _dark: "gray.700",
+      },
     },
   },
   fontSizes: {

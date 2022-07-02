@@ -43,6 +43,7 @@ export default function UsesPage() {
           <Tab>Hardware</Tab>
           <Tab>Apps</Tab>
         </TabList>
+        {/* {console.log(gadgetsData)} */}
         <TabPanels>
           <TabPanel>
             {!gadgetsData ? (
@@ -54,7 +55,7 @@ export default function UsesPage() {
                     key={i}
                     p="4"
                     border="1px solid"
-                    borderColor="border"
+                    borderColor="outline"
                     gridTemplateColumns="max-content auto"
                     gridGap="8"
                     borderRadius="md"
@@ -81,8 +82,8 @@ export default function UsesPage() {
               </Grid>
             )}
           </TabPanel>
+          {console.log(appsData)}
           <TabPanel>
-            {console.log(gadgetsData)}
             {!appsData ? (
               <Text>Loading...</Text>
             ) : (
@@ -92,12 +93,12 @@ export default function UsesPage() {
                     key={i}
                     p="2"
                     border="1px solid"
-                    borderColor="gray.200"
+                    borderColor="outline"
                     gridTemplateColumns="max-content auto"
                     gridGap="8"
                     borderRadius="md"
                   >
-                    {item.fields["Image"] && (
+                    {item.fields.Image && (
                       <Box
                         backgroundColor="indigo.200"
                         borderRadius="36px"
@@ -109,8 +110,8 @@ export default function UsesPage() {
                         position="relative"
                       >
                         <Image
-                          src={item.fields["Image"][0].thumbnails.large.url}
-                          alt={item.fields["Name"]}
+                          src={item.fields.Image[0].thumbnails.large.url}
+                          alt={item.fields.Name}
                           height="64px"
                           width="64px"
                         />
@@ -118,21 +119,21 @@ export default function UsesPage() {
                     )}
                     <Box>
                       <Heading fontSize="xl" my="0" lineHeight="short">
-                        {item.fields["Name"]}
+                        {item.fields.Name}
                       </Heading>
-                      {/* <Text fontSize="sm">{item.fields["DescriptionTC"]}</Text> */}
+
                       <Box
                         dangerouslySetInnerHTML={{
-                          __html: marked(item.fields["DescriptionTC"]),
+                          __html: marked(item.fields.DescriptionTC),
                         }}
                       />
-                      {item.fields["ExtraLink"] && (
+                      {/* {item.fields.ExtraLink && (
                         <Button>
-                          <NextLink href={item.fields["ExtraLink"]}>
+                          <NextLink href={item.fields.ExtraLink}>
                             {item.fields["CTA"]}
                           </NextLink>
                         </Button>
-                      )}
+                      )} */}
                     </Box>
                   </Grid>
                 ))}
