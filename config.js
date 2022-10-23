@@ -22,6 +22,10 @@ module.exports = {
       path: "/category/桌面/",
     },
     {
+      label: "筆記系統",
+      path: "/tag/筆記系統/",
+    },
+    {
       label: "旅遊",
       path: "/category/地圖",
     },
