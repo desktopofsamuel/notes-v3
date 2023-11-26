@@ -17,24 +17,26 @@ export default function NextLink({
   const internal = /^\/(?!\/)/.test(href);
   if (internal)
     return (
-      <Link href={href} passHref>
-        <ChakraLink
-          href={href}
-          className={className}
-          variant={variant}
-          {...rest}
-        >
-          {children}
-        </ChakraLink>
-      </Link>
+      <ChakraLink
+        as={Link}
+        href={href}
+        className={className}
+        variant={variant}
+        passHref
+        {...rest}
+      >
+        {children}
+      </ChakraLink>
     );
   return (
     <ChakraLink
+      as={Link}
       isExternal
       href={href}
       className={className}
       rel="noreferrer noopener"
       variant={variant}
+      passHref
       {...rest}
     >
       {children}
@@ -45,7 +47,7 @@ export default function NextLink({
 const defaultProps: LinkProps = {
   target: `_self`,
   className: "",
-  children: {},
+  children: null,
   href: "",
   passHref: false,
   variant: "",

@@ -38,7 +38,7 @@ export default function ContentPageTemplate({
         }}
       />
       <Heading>{frontmatter.title}</Heading>
-      {console.log(excerpt)}
+      {/* {console.log(excerpt)} */}
       {/* <img src={socialImage} alt="" /> */}
       <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       {/* {console.log(slug)} */}

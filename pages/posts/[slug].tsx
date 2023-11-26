@@ -80,7 +80,7 @@ export default function PostPage({
       <Heading as="h1" variant="pagetitle" mt="2" mb="8">
         {frontmatter.title}
       </Heading>
-      {console.log(excerpt)}
+      {/* {console.log(excerpt)} */}
       {/* <img src={socialImage} alt="" /> */}
       <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       {/* {console.log(slug)} */}
