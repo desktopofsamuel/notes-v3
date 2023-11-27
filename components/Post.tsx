@@ -46,7 +46,7 @@ export default function Post({ post }: { post: PostType }) {
         {post.excerpt}
       </Text>
       <NextLink variant="noeffect" href={`/posts/${post.slug}`}>
-        <Button rightIcon={<ArrowForwardIcon />} variant="ghost" ml="-18px">
+        <Button as="div" rightIcon={<ArrowForwardIcon />} variant="ghost" ml="-18px">
           閱讀更多
         </Button>
       </NextLink>

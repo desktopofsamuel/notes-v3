@@ -30,10 +30,10 @@ export default function AboutPage() {
           </Text>
           <HStack gap="4">
           <Link passHref href="https://twitter.com/desktopofsamuel">
-            <Button leftIcon={<FaTwitter />}>我的 Twitter</Button>
+            <Button as="div" leftIcon={<FaTwitter />}>我的 Twitter</Button>
           </Link>
           <Link passHref href="https://www.instagram.com/desktopofsamuel/">
-            <Button leftIcon={<FaInstagram />}>我的 Instagram</Button>
+            <Button as="div" leftIcon={<FaInstagram />}>我的 Instagram</Button>
           </Link>
         </HStack>
         </Box>
