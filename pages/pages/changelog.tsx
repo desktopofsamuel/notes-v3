@@ -5,9 +5,15 @@ import Entry from "@/components/Entry";
 const Changelog = () => {
   return (
     <Layout title="更新日誌 Changelog">
-      <Heading as="h2">更新日誌 Changelog</Heading>
+      <Heading as="h1">更新日誌 Changelog</Heading>
       <UnorderedList>
-      <Entry
+        <Entry
+          title="更新到 Next 14"
+          description="支援 Next v14，以及修正了codeblock <pre>的style "
+          date="2023-11-29"
+          commit="15517d5b1c4dd6598ebd53818ea3260e02197b57"
+        />
+        <Entry
           title="Skeleton loading"
           description="為 Now 載入的資料加入 Skeleton Loading"
           date="2022-07-02"
