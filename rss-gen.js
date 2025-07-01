@@ -14,8 +14,8 @@ const RSS_CONFIG = {
   feed_url: `${CONFIG.URL}/rss.xml`,
   site_url: CONFIG.URL,
   image_url: `${CONFIG.URL}${CONFIG.OG_IMAGE}`,
-  managingEditor: CONFIG.AUTHOR_NAME,
-  webMaster: CONFIG.AUTHOR_NAME,
+  managingEditor: `${CONFIG.AUTHOR_NAME} (${CONFIG.EMAIL || 'noreply@desktopofsamuel.com'})`,
+  webMaster: `${CONFIG.AUTHOR_NAME} (${CONFIG.EMAIL || 'noreply@desktopofsamuel.com'})`,
   copyright: CONFIG.COPYRIGHT,
   language: CONFIG.LOCALE,
   pubDate: new Date().toISOString(),
@@ -31,6 +31,58 @@ const RSS_CONFIG = {
     'sy': 'http://purl.org/rss/1.0/modules/syndication/'
   }
 };
+
+/**
+ * Encode URL to handle Chinese characters and special characters
+ * @param {string} url - URL to encode
+ * @returns {string} Encoded URL
+ */
+function encodeUrl(url) {
+  try {
+    // Split URL into parts
+    const urlParts = url.split('/');
+    const encodedParts = urlParts.map(part => {
+      // Don't encode protocol, domain, or empty parts
+      if (part === '' || part.includes('://') || part.includes('.')) {
+        return part;
+      }
+      // Encode the path segments
+      return encodeURIComponent(part);
+    });
+    return encodedParts.join('/');
+  } catch (error) {
+    console.warn(`Warning: Could not encode URL ${url}:`, error.message);
+    return url;
+  }
+}
+
+/**
+ * Clean and validate image URL for enclosure
+ * @param {string} imageUrl - Raw image URL
+ * @returns {string|null} Cleaned image URL or null if invalid
+ */
+function cleanImageUrl(imageUrl) {
+  if (!imageUrl) return null;
+  
+  try {
+    let cleanUrl = imageUrl.trim();
+    
+    // Remove spaces and parentheses from filename
+    cleanUrl = cleanUrl.replace(/\s+/g, '').replace(/[()]/g, '');
+    
+    // Ensure it's a full URL
+    if (!cleanUrl.startsWith('http')) {
+      cleanUrl = `${CONFIG.URL}${cleanUrl.startsWith('/') ? '' : '/'}${cleanUrl}`;
+    }
+    
+    // Basic URL validation
+    new URL(cleanUrl);
+    return cleanUrl;
+  } catch (error) {
+    console.warn(`Warning: Invalid image URL ${imageUrl}:`, error.message);
+    return null;
+  }
+}
 
 /**
  * Sanitize and clean markdown content for RSS
@@ -66,13 +118,7 @@ function parseMarkdown(markdownText, charLimit = 500) {
     // Clean up multiple newlines
     .replace(/\n\s*\n/gim, "\n")
     // Remove trailing whitespace
-    .replace(/\s+$/gim, "")
-    // HTML escape special characters
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
+    .replace(/\s+$/gim, "");
 
   return htmlText.trim().slice(0, charLimit);
 }
@@ -89,7 +135,7 @@ const getExcerpt = (markdownText, charLimit = 800) => {
 };
 
 /**
- * Generate full HTML content from markdown
+ * Generate full HTML content from markdown with proper XML escaping
  * @param {string} markdownText - Raw markdown content
  * @returns {string} HTML content
  */
@@ -120,7 +166,7 @@ const getFullContent = (markdownText) => {
     .replace(/`([^`]+)`/gim, "<code>$1</code>")
     // Convert line breaks
     .replace(/\n/gim, "<br />")
-    // HTML escape special characters
+    // XML escape special characters (must be done last)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
@@ -163,6 +209,15 @@ function generateGuid(url, date) {
 }
 
 /**
+ * Create a URL-safe slug from filename
+ * @param {string} fileName - Original filename
+ * @returns {string} URL-safe slug
+ */
+function createSlug(fileName) {
+  return fileName.replace('.md', '').replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').toLowerCase();
+}
+
+/**
  * Main RSS generation function
  */
 function generateRSS() {
@@ -193,13 +248,14 @@ function generateRSS() {
           
           const excerpt = getExcerpt(content, 800);
           const fullContent = getFullContent(content);
+          const slug = createSlug(fileName);
           
           return { 
             ...frontmatter, 
             fileName, 
             excerpt, 
             fullContent,
-            slug: fileName.replace('.md', '')
+            slug
           };
         } catch (error) {
           console.error(`❌ Error processing ${fileName}:`, error.message);
@@ -215,12 +271,13 @@ function generateRSS() {
     // Add items to RSS feed
     posts.forEach(({ title, date, tags, category, fileName, excerpt, fullContent, slug, socialImage }) => {
       const itemUrl = `${CONFIG.URL}/posts/${slug}/`;
-      const guid = generateGuid(itemUrl, date);
+      const encodedUrl = encodeUrl(itemUrl);
+      const guid = generateGuid(encodedUrl, date);
       
       const item = {
         title: title || 'Untitled',
         description: excerpt,
-        url: itemUrl,
+        url: encodedUrl,
         guid: guid,
         author: CONFIG.AUTHOR_NAME,
         categories: tags || [],
@@ -232,12 +289,15 @@ function generateRSS() {
         ]
       };
 
-      // Add enclosure if social image exists
+      // Add enclosure if social image exists and is valid
       if (socialImage) {
-        item.enclosure = {
-          url: socialImage.startsWith('http') ? socialImage : `${CONFIG.URL}${socialImage}`,
-          type: 'image/jpeg'
-        };
+        const cleanImageUrl = cleanImageUrl(socialImage);
+        if (cleanImageUrl) {
+          item.enclosure = {
+            url: cleanImageUrl,
+            type: 'image/jpeg'
+          };
+        }
       }
 
       feed.item(item);

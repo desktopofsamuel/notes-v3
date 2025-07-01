@@ -6,7 +6,7 @@ module.exports = {
   URL: "https://notes.desktopofsamuel.com",
   PATH_PREFIX: "",
   USERNAME: "@desktopofsamuel",
-  EMAIL: "",
+  EMAIL: "hello@desktopofsamuel.com",
   LOCATION: "Hong Kong",
   MENU: [
     {
