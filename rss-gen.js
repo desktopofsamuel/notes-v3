@@ -7,36 +7,28 @@ const CONFIG = require("./config.js");
 const blogPostDir = path.resolve(__dirname, "content", "posts");
 const outputDir = path.resolve(__dirname, "public");
 
-// RSS Feed Configuration
-const RSS_CONFIG = {
-  title: CONFIG.TITLE,
-  description: CONFIG.DESCRIPTION,
-  feed_url: `${CONFIG.URL}/rss.xml`,
-  site_url: CONFIG.URL,
-  image_url: `${CONFIG.URL}${CONFIG.OG_IMAGE}`,
-  managingEditor: `${CONFIG.AUTHOR_NAME} (${CONFIG.EMAIL || 'noreply@desktopofsamuel.com'})`,
-  webMaster: `${CONFIG.AUTHOR_NAME} (${CONFIG.EMAIL || 'noreply@desktopofsamuel.com'})`,
-  copyright: CONFIG.COPYRIGHT,
-  language: CONFIG.LOCALE,
-  pubDate: new Date().toISOString(),
-  lastBuildDate: new Date().toISOString(),
-  generator: "Custom RSS Generator",
-  docs: "https://www.rssboard.org/rss-specification",
-  ttl: 60,
-  categories: CONFIG.KEYWORDS.split(',').map(k => k.trim()),
-  custom_namespaces: {
-    'atom': 'http://www.w3.org/2005/Atom',
-    'content': 'http://purl.org/rss/1.0/modules/content/',
-    'dc': 'http://purl.org/dc/elements/1.1/',
-    'sy': 'http://purl.org/rss/1.0/modules/syndication/'
+// Utility functions (put these at the top!)
+function cleanImageUrl(imageUrl) {
+  if (!imageUrl) return null;
+  try {
+    let cleanUrl = imageUrl.trim();
+    // Ensure it's a full URL
+    if (!cleanUrl.startsWith('http')) {
+      cleanUrl = `${CONFIG.URL}${cleanUrl.startsWith('/') ? '' : '/'}${cleanUrl}`;
+    }
+    // URL-encode each path segment after the domain
+    const urlObj = new URL(cleanUrl);
+    urlObj.pathname = urlObj.pathname
+      .split('/')
+      .map(segment => encodeURIComponent(segment))
+      .join('/');
+    return urlObj.toString();
+  } catch (error) {
+    console.warn(`Warning: Invalid image URL ${imageUrl}:`, error.message);
+    return null;
   }
-};
+}
 
-/**
- * Encode URL to handle Chinese characters and special characters
- * @param {string} url - URL to encode
- * @returns {string} Encoded URL
- */
 function encodeUrl(url) {
   try {
     // Split URL into parts
@@ -53,34 +45,6 @@ function encodeUrl(url) {
   } catch (error) {
     console.warn(`Warning: Could not encode URL ${url}:`, error.message);
     return url;
-  }
-}
-
-/**
- * Clean and validate image URL for enclosure
- * @param {string} imageUrl - Raw image URL
- * @returns {string|null} Cleaned image URL or null if invalid
- */
-function cleanImageUrl(imageUrl) {
-  if (!imageUrl) return null;
-  
-  try {
-    let cleanUrl = imageUrl.trim();
-    
-    // Remove spaces and parentheses from filename
-    cleanUrl = cleanUrl.replace(/\s+/g, '').replace(/[()]/g, '');
-    
-    // Ensure it's a full URL
-    if (!cleanUrl.startsWith('http')) {
-      cleanUrl = `${CONFIG.URL}${cleanUrl.startsWith('/') ? '' : '/'}${cleanUrl}`;
-    }
-    
-    // Basic URL validation
-    new URL(cleanUrl);
-    return cleanUrl;
-  } catch (error) {
-    console.warn(`Warning: Invalid image URL ${imageUrl}:`, error.message);
-    return null;
   }
 }
 
@@ -217,6 +181,31 @@ function createSlug(fileName) {
   return fileName.replace('.md', '').replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').toLowerCase();
 }
 
+// RSS Feed Configuration
+const RSS_CONFIG = {
+  title: CONFIG.TITLE,
+  description: CONFIG.DESCRIPTION,
+  feed_url: `${CONFIG.URL}/rss.xml`,
+  site_url: CONFIG.URL,
+  image_url: `${CONFIG.URL}${CONFIG.OG_IMAGE}`,
+  managingEditor: `${CONFIG.AUTHOR_NAME} (${CONFIG.EMAIL || 'noreply@desktopofsamuel.com'})`,
+  webMaster: `${CONFIG.AUTHOR_NAME} (${CONFIG.EMAIL || 'noreply@desktopofsamuel.com'})`,
+  copyright: CONFIG.COPYRIGHT,
+  language: CONFIG.LOCALE,
+  pubDate: new Date().toISOString(),
+  lastBuildDate: new Date().toISOString(),
+  generator: "Custom RSS Generator",
+  docs: "https://www.rssboard.org/rss-specification",
+  ttl: 60,
+  categories: CONFIG.KEYWORDS.split(',').map(k => k.trim()),
+  custom_namespaces: {
+    'atom': 'http://www.w3.org/2005/Atom',
+    'content': 'http://purl.org/rss/1.0/modules/content/',
+    'dc': 'http://purl.org/dc/elements/1.1/',
+    'sy': 'http://purl.org/rss/1.0/modules/syndication/'
+  }
+};
+
 /**
  * Main RSS generation function
  */
@@ -291,10 +280,10 @@ function generateRSS() {
 
       // Add enclosure if social image exists and is valid
       if (socialImage) {
-        const cleanImageUrl = cleanImageUrl(socialImage);
-        if (cleanImageUrl) {
+        const cleanedImageUrl = cleanImageUrl(socialImage);
+        if (cleanedImageUrl) {
           item.enclosure = {
-            url: cleanImageUrl,
+            url: cleanedImageUrl,
             type: 'image/jpeg'
           };
         }
