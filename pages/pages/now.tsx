@@ -38,7 +38,7 @@ export default function AboutPage() {
         </HStack>
         </Box>
         
-        <Box>
+        {/* <Box>
           <Heading>現在 Now</Heading>
           <Text>
             <a href="https://sive.rs/nowff" target="_blank" rel="noreferrer">Now Page Movement</a> 是一個外國網主發起的運動，在自己的網站開一新頁
@@ -65,7 +65,7 @@ export default function AboutPage() {
               </Link>
             </Text>
           </Alert>
-        </Box>
+        </Box> */}
       </Stack>
     </Layout>
   );

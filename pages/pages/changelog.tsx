@@ -9,7 +9,7 @@ const Changelog = () => {
       <UnorderedList>
         <Entry
           title="更新到 Next 14"
-          description="支援 Next v14，以及修正了codeblock <pre>的style "
+          description="支援 Next v14，以及修正了codeblock pre的style "
           date="2023-11-29"
           commit="15517d5b1c4dd6598ebd53818ea3260e02197b57"
         />
