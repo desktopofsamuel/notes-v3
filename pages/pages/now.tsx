@@ -30,15 +30,15 @@ export default function AboutPage() {
           </Text>
           <HStack gap="4">
           <Link passHref href="https://twitter.com/desktopofsamuel">
-            <Button leftIcon={<FaTwitter />}>我的 Twitter</Button>
+            <Button as="div" leftIcon={<FaTwitter />}>我的 Twitter</Button>
           </Link>
           <Link passHref href="https://www.instagram.com/desktopofsamuel/">
-            <Button leftIcon={<FaInstagram />}>我的 Instagram</Button>
+            <Button as="div" leftIcon={<FaInstagram />}>我的 Instagram</Button>
           </Link>
         </HStack>
         </Box>
         
-        <Box>
+        {/* <Box>
           <Heading>現在 Now</Heading>
           <Text>
             <a href="https://sive.rs/nowff" target="_blank" rel="noreferrer">Now Page Movement</a> 是一個外國網主發起的運動，在自己的網站開一新頁
@@ -65,7 +65,7 @@ export default function AboutPage() {
               </Link>
             </Text>
           </Alert>
-        </Box>
+        </Box> */}
       </Stack>
     </Layout>
   );

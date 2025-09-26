@@ -299,13 +299,16 @@ const customTheme = extendTheme({
       li: {
         color: mode("gray.600", "indigo.300")(props),
       },
-      // pre: {
-      //   my: "2",
+      pre: {
+        my: "2",
       //   whiteSpace: "pre-wrap",
-      //   fontSize: "sm",
+        fontSize: "sm",
       //   lineHeight: "short",
-      //   backgroundColor: "gray.200",
-      // },
+        backgroundColor: "gray.100",
+        overflowX: "scroll",
+        padding: "4",
+        borderRadius: "sm"
+      },
       // code: {
       //   padding: "1",
       //   margin: "2 0",

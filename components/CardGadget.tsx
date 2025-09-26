@@ -35,7 +35,6 @@ export default function CardGadget() {
         ) : (
           data.slice(0, 4).map((item: any, i: number) => (
             <Box key={i}>
-              {console.log(item)}
               <Text my="0" lineHeight="short">
                 {item.fields["Name"]}
               </Text>

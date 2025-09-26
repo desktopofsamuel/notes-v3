@@ -82,7 +82,7 @@ export default function UsesPage() {
               </Grid>
             )}
           </TabPanel>
-          {console.log(appsData)}
+          {/* {console.log(appsData)} */}
           <TabPanel>
             {!appsData ? (
               <Text>Loading...</Text>
@@ -112,8 +112,8 @@ export default function UsesPage() {
                         <Image
                           src={item.fields.Image[0].thumbnails.large.url}
                           alt={item.fields.Name}
-                          height="64px"
-                          width="64px"
+                          height={64}
+                          width={64}
                         />
                       </Box>
                     )}

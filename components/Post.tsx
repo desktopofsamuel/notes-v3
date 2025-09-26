@@ -35,18 +35,21 @@ export default function Post({ post }: { post: PostType }) {
           {post.frontmatter.category}
         </Text>
       </HStack>
-      <NextLink href={`/posts/${post.slug}`} variant="postTitle" passHref>
-        <LinkOverlay>
-          <Heading variant="title" mt="0">
-            {post.frontmatter.title}
-          </Heading>
-        </LinkOverlay>
+      <NextLink href={`/posts/${post.slug}`} variant="postTitle">
+        <Heading variant="title" mt="0">
+          {post.frontmatter.title}
+        </Heading>
       </NextLink>
       <Text noOfLines={3} my="2">
         {post.excerpt}
       </Text>
       <NextLink variant="noeffect" href={`/posts/${post.slug}`}>
-        <Button rightIcon={<ArrowForwardIcon />} variant="ghost" ml="-18px">
+        <Button
+          as="div"
+          rightIcon={<ArrowForwardIcon />}
+          variant="ghost"
+          ml="-18px"
+        >
           閱讀更多
         </Button>
       </NextLink>
