@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Container, Grid, Box } from "@chakra-ui/react";
+import { Container, Grid, Box, useColorModeValue } from "@chakra-ui/react";
 import Nav from "@/components/Nav";
 import { NextSeo } from "next-seo";
 import FooterNav from "@/components/FooterNav";
@@ -11,6 +11,10 @@ export default function Layout({
   description,
   children,
 }: LayoutProps) {
+  const bgGradient = useColorModeValue(
+    "linear-gradient(180deg,#e1e1e1 0,#e1e1e1 48%,#fff)",
+    "linear-gradient(180deg,#253764 0,#253764 48%,#1A2025)"
+  );
   return (
     <>
       <NextSeo
@@ -36,7 +40,7 @@ export default function Layout({
         >
          <Nav />
           <Box
-            background="linear-gradient(180deg,#e1e1e1 0,#e1e1e1 48%,#fff)"
+            background={bgGradient}
             height="33vh"
             width="1px"
             display={{ base: "none", md: "none", lg: "block" }}
