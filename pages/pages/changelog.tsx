@@ -9,9 +9,15 @@ const Changelog = () => {
       <UnorderedList>
         <Entry
           title="更新到 Next 14"
-          description="支援 Next v14，以及修正了codeblock pre的style "
-          date="2023-11-29"
-          commit="15517d5b1c4dd6598ebd53818ea3260e02197b57"
+          description="支援 Next v14"
+          date="2025-09-26"
+          commit="d5b3662aeaed25a227baa28114f846b09faea4ce"
+        />
+         <Entry
+          title="更新RSS匯出"
+          description="修復了 RSS Script的 bug，以及加入了 sitemap.xml 的匯出"
+          date="2025-07-01"
+          commit="5c2b2a45a3f730b59c097cf229886d653fa1ae55"
         />
         <Entry
           title="Skeleton loading"
