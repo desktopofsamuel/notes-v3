@@ -36,10 +36,6 @@ module.exports = {
       path: "/",
     },
     {
-      label: "我的 Setup",
-      path: "/pages/uses/",
-    },
-    {
       label: "更新日誌",
       path: "/pages/changelog/",
     },
