@@ -16,7 +16,7 @@ import NextLink from "@/components/NextLink";
 export default function Post({ post }: { post: PostType }) {
   // console.log(post);
   return (
-    <LinkBox as="article" mb="6" justifyItems="baseline">
+    <LinkBox as="article" mb="6" justifyItems="baseline" w="100%">
       <HStack as="span" spacing="2">
         <Text
           as="time"
